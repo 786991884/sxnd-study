@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.i18n.reload" value="true"></constant>
+	<constant name="struts.action.extension" value="action"></constant>
+	<!-- 禁止读取浏览器缓存 -->
+	<constant name="struts.serve.static.browserCache" value="true"></constant>
+	<!-- 修改struts配置文件名后将自动重载 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- sturts的配置文件名 -->
+	<constant name="struts.configuration.files" value="struts"></constant>
+	<package name="jfreechart" extends="jfreechart-default" namespace="/">
+		<action name="barChart" class="chart.action.BarChartAction">
+			<result name="success" type="chart">
+				<param name="value">chart</param>
+				<param name="type">png</param>
+				<param name="width">700</param>
+				<param name="height">500</param>
+			</result>
+		</action>
+		<action name="barchart" class="chart.action.CreateBarChart">
+			<result name="success" type="chart">
+				<param name="value">chart</param>
+				<param name="type">png</param>
+				<param name="height">700</param>
+				<param name="width">400</param>
+			</result>
+		</action>
+	</package>
+</struts>

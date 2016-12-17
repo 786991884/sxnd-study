@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript的动态数据类型</title>
+</head>
+<body>
+<script type="text/javascript">
+   var a;
+   console.log(typeof a);//undefined
+   a=12;
+   console.log(typeof a);//number
+   a="ab";
+   console.log(typeof a);//string
+   var b=Boolean("1");//它就是一个转换函数而已
+   console.log(typeof b);//原始类型
+   var c=new Boolean("1");
+   console.log(typeof c);//对象类型
+</script>
+</body>
+</html>

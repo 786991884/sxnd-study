@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sxnd-study</artifactId>
+        <groupId>com.xubh.sxnd</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>JFreeChart</module>
+        <module>springdata</module>
+        <module>springmvc-1</module>
+        <module>springmvc-2</module>
+        <module>springmvc-3</module>
+        <module>spring-1</module>
+        <module>spring-2</module>
+        <module>spring-3</module>
+        <module>spring-4</module>
+        <module>spring-5</module>
+        <module>spring-6</module>
+        <module>spring-7</module>
+        <module>spring-8</module>
+    </modules>
+
+</project>

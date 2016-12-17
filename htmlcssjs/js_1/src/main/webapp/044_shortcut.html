@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>短路</title>
+</head>
+<body>
+<script type="text/javascript">
+var a=1;
+var b="c";
+//当前面一个转为boolean是真的时候，就返回前一个值；否则就是后一个
+var c=a||b;
+console.log(c);
+</script>
+</body>
+</html>

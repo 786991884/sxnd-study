@@ -1,0 +1,20 @@
+div {
+	position: relative;
+	width: 730px;
+}
+
+ul {
+	list-style-type: none;
+	position: absolute;
+	bottom: 30px;
+}
+li.on{
+  background-color: red;
+}
+
+ul li {
+	float: left;
+	border: 1px solid red;
+	margin-right: 10px;
+	width: 23px;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author" content="南阳德刚">
+<title>Insert title here</title>
+</head>
+<body>
+<div  style="width: 40%;height: 150px;background-color: red;float: left;">
+  div1的高度是150px,宽度是40%
+</div>
+<div  style="width: 40%;height: 50px;background-color: blue;float: left;">
+  div2的高度是50px,宽度是40%
+</div>
+<div  style="width: 40%;height: 50px;background-color: yellow;float: left;">
+  div3的高度是50px,宽度是40%,但是由于三个元素之和是120%，超出宽度，div3将在新的一行显示;由于向左浮动，而下一行的y值是51，小于div
+  1的高度，只能浮动到div1的右边
+</div>
+<div  style="width: 40%;height: 50px;background-color:green;float: left;clear: left;">
+  div4的高度是50px,应该从y值等于101处开始,仍然小于div1的高度，因而会被"卡住",但是我们要求左边木有浮动元素,因而它要在新的
+  一行显示
+</div>
+</body>
+</html>

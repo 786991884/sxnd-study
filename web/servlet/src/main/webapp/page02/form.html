@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test Form</title>
+</head>
+<body>
+	<form action="../ParaServlet" method="post">
+		<h3>Please fill out the following form data</h3>
+		First Name:<input type="text" name="fname">
+		<p>
+			Last Name:<input type="text" name="lname">
+		<p>
+			Postion:<select name="select">
+				<option>Software engineer</option>
+				<option>Editor</option>
+				<option>Developer</option>
+				<option>Instructor</option>
+			</select>
+			<p>I would like to receive marketing meterials
+			<input type="checkbox" name="checkbox">
+			<p><input type="file" name="file">
+			<p><input type="submit"> <input type="reset"></form>
+</body>
+</html>

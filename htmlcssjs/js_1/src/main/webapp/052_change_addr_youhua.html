@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>换目的地</title>
+<style type="text/css">
+.container {
+	width: 308px;
+	position: relative;
+	overflow: hidden;
+	background-color: #EEF1F8;
+	padding: 1px 10px;
+}
+
+.row {
+	width: 85%;
+	margin: 10px 0px;
+	overflow: hidden;
+}
+
+.row:after {
+	content: "";
+	clear: both;
+}
+
+.row .lf {
+	float: left;
+	width: 40%
+}
+
+.row .rf {
+	float: left;
+	width: 60%
+}
+
+#myDiv {
+	position: absolute;
+	width: 23px;
+	height: 46px;
+	overflow: hidden;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+	background-image: url("img/bg02.png");
+	background-position: -60px -80px;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="lf">
+				<label>出发地</label>
+			</div>
+			<div class="rf">
+				<input name="cf" id="cf" value="北京">
+			</div>
+		</div>
+		<div class="row">
+			<div class="lf">
+				<label>目的地</label>
+			</div>
+			<div class="rf">
+				<input name="md" id="md" value="上海">
+			</div>
+
+		</div>
+		<div id="myDiv"></div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById("myDiv").addEventListener("click", function() {
+			var cf = document.getElementById("cf");
+			var md = document.getElementById("md");
+			var temp = cf.value;
+			cf.value = md.value;
+			md.value = temp;
+		});
+	</script>
+</body>
+</html>

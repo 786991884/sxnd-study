@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author" content="南阳德刚">
+<script type="text/javascript">
+ function hiddenDiv() {
+	var div=document.getElementById("zz");
+	div.style.display="none";
+}
+ function showDlg(){
+	 var div=document.getElementById("zz");
+	 div.style.display="block";
+}
+</script>
+<title>Insert title here</title>
+<style type="text/css">
+body {
+	margin: 0px;
+}
+</style>
+<style type="text/css">
+#container {
+	/*border: 1px solid red;*/
+	width: 240px;
+	height: 120px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	margin-left: -120px;
+	margin-top: -60px;
+	background-color: white;
+}
+</style>
+</head>
+<body>
+<button onclick="showDlg()">显示对话框</button>
+	<a href="http://www.baidu.com">baidu</a>
+	<div style="position: fixed;top:0px; width: 100%; height: 100%; background-color: rgba(139, 140, 142, 0.5); display: none;" id="zz">
+		<div id="container">
+			<div style="background-color: #EAEAEA; height: 20px; text-align: right;">
+				<button onclick="hiddenDiv()">x</button>
+			</div>
+			<form action="" style="padding: 10px;">
+				姓名:<input type="text" name="uname"><br> 密码:<input type="password" name="pwd"><br> <input type="submit" value="登录" />
+			</form>
+			<div style="background-color: #EAEAEA; height: 20px;"></div>
+		</div>
+	</div>
+	
+	<!-- <img alt="" src="../html/img/bf183a76-90cd-45d4-99da-6de7a905157c.jpg"><br>
+<img alt="" src="../html/img/bf183a76-90cd-45d4-99da-6de7a905157c.jpg"><br>
+<button onclick="alert('sb')">sb</button> -->
+</body>
+</html>

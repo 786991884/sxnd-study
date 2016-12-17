@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>New Student Information</title>
+</head>
+<body>
+	Student self-management system. Please enter your information:
+	<br />
+	<table>
+		<form action="updateStudent.jsp" method="GET">
+			<input type="hidden" name="action" value="create" /> <input
+				type="hidden" name="resource" value="newStudentInfo.html" />
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="text" name="age" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit"
+					value="New Student" /></td>
+			</tr>
+		</form>
+	</table>
+</body>
+</html>

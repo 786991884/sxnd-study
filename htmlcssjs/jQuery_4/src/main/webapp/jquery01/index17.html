@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>事件对象</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.bg {
+	background-color: #ccc;
+}
+
+.size {
+	font-size: 20px;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+		/* 	$('input').bind('click', function(e) {
+				alert(e);
+			});
+			$('input').bind('click',function(e){
+				alert(e.type);
+			});
+			$('input').bind('click',function(e){
+				alert(e.target);
+			});
+			$('input').bind('click',function(e){
+				alert(e.relatedTarget);
+			});
+			$('input').bind('click',function(e){
+				alert(e.currentTarget);
+			}); */
+		/* $('div').bind('click', function (e) {
+			alert(e.target);
+		});
+		
+		$('div').bind('click', function (e) {
+			alert(e.currentTarget);
+		}); */
+		//target是获取触发元素的dom，触发元素，就是你点了哪个就是哪个
+		//currentTarget得到的是监听元素的dom,你绑定的是哪个就是哪个
+		/* 	$('span').bind('mouseover', function(e) {
+				alert(e.relatedTarget);
+			});
+
+			$('span').bind('mouseout', function(e) {
+				alert(e.relatedTarget);
+			});
+
+			$('div').bind('click', function(e) {
+				alert(this == e.currentTarget);
+			});
+
+			$('div').bind('click', function(e) {
+				alert(this == e.target);
+			}); */
+		/* $('input').bind('click', 123, function (e) {
+			alert(e.data);
+		});
+		
+		$('input').bind('click', 'abc', function (e) {
+			alert(e.data);
+		}); */
+		/* $('input').bind('click', [ 1, 2, 3, 'a', 'b' ], function(e) {
+			alert(e.data[3]);
+		});
+		$('input').bind('click', {user : 'Lee', age : 100}, function (e) {
+			alert(e.data.age);
+		}); */
+		/* $(document).bind('click', function (e) {
+			alert(e.pageX + ',' + e.screenX + ',' + e.clientX);
+		});
+		
+		$(document).bind('click', function (e) {
+			alert(e.pageY + ',' + e.screenY + ',' + e.clientY);
+		}); */
+		/* $('input').bind('click', function(e) {
+			return 123;
+		});
+
+		$('input').bind('click', function(e) {
+			alert(e.result);
+		});
+
+		$('input').bind('click', function(e) {
+			alert(e.timeStamp);
+		});
+
+		$('input').bind('mousedown', function(e) {
+			alert(e.which);
+		});
+
+		$('input').bind('keyup', function(e) {
+			alert(e.which);
+		}); */
+		$('input').bind('click',function(e){
+			alert(e.ctrlKey);
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="button" value="按钮" />
+	<div style="width: 200px; height: 200px; background: #ccc;">
+		<span
+			style="width: 100px; height: 100px; background: #eee; display: block;"></span>
+	</div>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+</body>
+</html>

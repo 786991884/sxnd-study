@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+div {
+	width: 470px;
+	height: 265px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #29447e;
+}
+
+ul {
+	list-style-type: none;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+ul li {
+	display: inline;
+	borde-style: solid;
+	border-width: 1px;
+	background-color: white;
+	padding: 0 5px;
+	font-size: 10px;
+	line-height: 18px;
+}
+
+.current {
+	display: inline;
+	borde-style: solid;
+	border-width: 1px;
+	background-color: white;
+	padding: 0 5px;
+	font-size: 10px;
+	line-height: 18px;
+}

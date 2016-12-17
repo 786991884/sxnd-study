@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>双选框案例</title>
+<style type="text/css">
+.div1, .div2, .div3 {
+	width: 33%;
+	float: left;
+}
+
+.row {
+	width: 300px;
+}
+
+.row select {
+	overflow: hidden;
+	width: 98px;
+	height: 100px;
+}
+</style>
+</head>
+<body>
+	<div class="row">
+		<div class="div1">
+			<select multiple="multiple" id="lsel">
+				<option>project 1</option>
+				<option>project 2</option>
+				<option>project 3</option>
+			</select>
+		</div>
+		<div class="div2">
+			<button onclick="move(this)">Add&gt;</button>
+			<button onclick="move(this)">&lt;remove</button>
+			<button onclick="move(this)">addAll&gt;&gt;</button>
+			<button onclick="move(this)">&lt;&lt;removeAll</button>
+		</div>
+		<div class="div3">
+			<select multiple="multiple" id="rsel"></select>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function move(target) {
+
+			var lsel = document.getElementById("lsel");
+			var rsel = document.getElementById("rsel");
+			switch (target.innerHTML) {
+			case "Add&gt;":
+				//把左边被选中的移动到右边
+				while (lsel.selectedIndex != -1) {
+
+					var op = lsel.options[lsel.selectedIndex];
+					rsel.appendChild(op);
+				}
+				break;
+			case "&lt;remove":
+				//把左边被选中的移动到右边
+				while (rsel.selectedIndex != -1) {
+
+					var op = rsel.options[rsel.selectedIndex];
+					lsel.appendChild(op);
+				}
+				break;
+			case "addAll&gt;&gt;":
+				//把左边所有选项移动到右边
+				var ops = lsel.options;
+				// for (var i = 0; i < ops.length; i++) {
+				///	 rsel.appendChild(ops[i]);
+
+				//}
+				for (var i = ops.length - 1; i >= 0; i--) {
+					rsel.appendChild(ops[i]);
+				}
+				break;
+			case "&lt;&lt;removeAll":
+				//把左边所有选项移动到右边
+				var ops = rsel.options;
+				// for (var i = 0; i < ops.length; i++) {
+				///	 rsel.appendChild(ops[i]);
+
+				//}
+				for (var i = ops.length - 1; i >= 0; i--) {
+					lsel.appendChild(ops[i]);
+				}
+				break;
+
+			}
+		}
+	</script>
+</body>
+</html>

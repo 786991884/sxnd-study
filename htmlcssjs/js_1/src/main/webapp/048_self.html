@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>函数的自我调用</title>
+</head>
+<body>
+<script type="text/javascript">
+ // function test(name){alert(name);}
+  //test("z3");
+ // (function(name){alert(name)})("z3");
+ function(name){alert(name)}("z3");
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-12-7 11:14:49 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.bean.Employee" table="tab_EMPLOYEE">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="name" length="45" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="sex" length="1" type="java.lang.String">
+			<column name="SEX" />
+		</property>
+		<property name="business" type="java.lang.String">
+			<column name="BUSINESS" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="ADDRESS" />
+		</property>
+		<property name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+	</class>
+</hibernate-mapping>

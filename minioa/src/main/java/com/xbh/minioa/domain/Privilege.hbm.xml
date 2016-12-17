@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-6-3 19:57:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.xbh.minioa.domain.Privilege" table="PRIVILEGE">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="url" type="java.lang.String">
+			<column name="URL" />
+		</property>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="icon" type="java.lang.String">
+			<column name="ICON" />
+		</property>
+		<!-- roles属性，本类与Role的多对多 -->
+		<set name="roles" table="role_privilege" inverse="false" lazy="true">
+			<key>
+				<column name="privilegeId" />
+			</key>
+			<many-to-many class="com.xbh.minioa.domain.Role" column="roleId" />
+		</set>
+		<!-- parent属性，本类与Privilege（上级）的多对一 -->
+		<many-to-one name="parent" class="com.xbh.minioa.domain.Privilege" fetch="join">
+			<column name="parentId" />
+		</many-to-one>
+		<!-- children属性，本类与Privilege（下级）的一对多 -->
+		<set name="children" table="PRIVILEGE" order-by="id" lazy="false" inverse="false">
+			<key>
+				<column name="parentId" />
+			</key>
+			<one-to-many class="com.xbh.minioa.domain.Privilege" />
+		</set>
+	</class>
+</hibernate-mapping>

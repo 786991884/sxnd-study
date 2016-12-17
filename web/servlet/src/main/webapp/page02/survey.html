@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>潜在用户网络调查</title>
+</head>
+<body>
+	<h1>潜在用户网络调查</h1>
+	<form action="../SurveyServlet" method="get">
+		<table>
+			<tr>
+				<td align="right">姓名：</td>
+				<td><input type=text name=username></td>
+			</tr>
+			<tr>
+				<td align=right>Email：</td>
+				<td><input type=text name=email></td>
+			</tr>
+			<tr>
+				<td align="right">年纪：</td>
+				<td><input type="radio" name="age" value="小于18">小于18 <input
+					type=radio name=age value="18-25">18－25 <input type=radio
+					name=age value="26-40">26－40 <input type=radio name=age
+					value="大于40">大于40</td>
+			</tr>
+			<tr>
+				<td align="right">编程时间：</td>
+				<td><select name="time">
+						<option value="不编程">不编程</option>
+						<option value="1年">1年</option>
+						<option value="1年－3年">1年－3年</option>
+						<option value="3年-6年">3年－6年</option>
+						<option value="6年以上">6年以上
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right">使用的操作系统：</td>
+				<td><select multiple="multiple" name=system>
+						<option value="Win XP">Win XP</option>
+						<option value="Win 2000-2003">Win 2000-2003</option>
+						<option value="Linux">Linux</option>
+						<option value="FreeBSD">FreeBSD</option>
+						<option value="Mac OS">Mac OS</option>
+						<option value="other">other</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right">使用的编程语言：</td>
+				<td><input type=checkbox name=language value="C">C <input
+					type=checkbox name=language value="C++">C++ <input
+					type=checkbox name=language value="C#">C# <input
+					type=checkbox name=language value="Pyhon">Pyhon <input
+					type=checkbox name=language value="Java">Java <input
+					type=checkbox name=language value="VB">VB <input
+					type=checkbox name=language value="Dephi">Dephi</td>
+			</tr>
+			<tr>
+				<td align="right">建议：</td>
+				<td><textarea rows="3" name="advice"></textarea></td>
+			</tr>
+			<tr>
+				<td align=right><input type=submit></td>
+				<td><input type=reset></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title>string to json object</title>
+<script type="text/javascript" src="json.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var strObj = '{"name":"wangwu"}';
+		var jsonObj = JSON.parse(strObj);
+		alert(strObj);//string
+		alert(jsonObj);//object
+		alert(jsonObj.name);
+
+		//eval
+		var strObj1 = "{'age': '21-1'}";
+		var jsonObj1 = eval("(" + strObj1 + ")");
+		alert(jsonObj1.age);
+	</script>
+</body>
+</html>

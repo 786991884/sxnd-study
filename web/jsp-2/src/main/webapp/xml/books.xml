@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 必须有一个根元素 -->
+<books>
+	<book isbn="22222">
+		<author>java书本</author>
+		<proce>23元</proce>
+	</book>
+	<book isbn="22">
+		<author>javascript</author>
+		<proce>99</proce>
+	</book>
+</books>

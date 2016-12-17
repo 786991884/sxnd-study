@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>动画效果</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+#box {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+.test {
+	padding: 5px;
+	margin-right: 5px;
+	background: orange;
+	float: left;
+	display: none;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+		/* $('.show').click(function() {
+			$('#box').show();
+		});
+		$('.hide').click(function() {
+			$('#box').hide();
+		});
+		$('.show').click(function() {
+			$('#box').show(1000);
+		});
+		$('.show').click(function() {
+			$('#box').hide(1000);
+		}); */
+		//可以传递两个参数，一个是速度，第二个是回调函数
+		/* $('.show').click(function() {
+			$('#box').show('fast');
+		});
+		$('.hide').click(function () {
+			$('#box').hide('fast');
+		});
+		//默认是400毫秒
+		$('.show').click(function () {
+			$('#box').show('');
+		});
+		
+		$('.hide').click(function () {
+			$('#box').hide('');
+		}); */
+		/* 	$('.show').click(function() {
+				$('#box').show('slow', function() {
+					alert('显示完毕！');
+				});
+			});
+			$('.hide').click(function () {
+				$('#box').hide('slow');
+			}); */
+		//同步动画，四个区块同时显示出来
+		/* $('.show').click(function() {
+			$('.test').show('slow');
+		}); */
+		//列队动画
+		/* $('.show').click(function() {
+			$('.test').eq(0).show('fast', function() {
+				$('.test').eq(1).show('fast', function() {
+					$('.test').eq(2).show('fast', function() {
+						$('.test').eq(3).show('fast');
+					});
+				});
+			});
+		}); */
+		//列队动画，递归自调用
+		/* $('.show').click(function() {
+			$('.test').first().show('fast', function testShow() {
+				$(this).next().show('fast', testShow);
+			});
+		});
+		$('.hide').click(function() {
+			$('.test').last().hide('fast', function testShow() {
+				$(this).prev().hide('fast', testShow);
+			});
+		}); */
+		/* $('.toggle').click(function() {
+			$('#box').toggle('slow');
+		});
+		$('.up').click(function() {
+			$('#box').slideUp('slow');
+		});
+		$('.down').click(function() {
+			$('#box').slideDown('slow');
+		});
+		$('toggle').click(function() {
+			$('#box').slideToggle('slow');
+		}); */
+		$('.out').click(function() {
+			$('#box').fadeOut('slow');
+		});
+		$('.in').click(function() {
+			$('#box').fadeIn('slow');
+		});
+		$('.toggle').click(function() {
+			$('#box').fadeToggle('slow');
+		});
+		$('.to').click(function() {
+			$('#box').fadeTo('slow', 0.33); //0-1之间
+		});
+	});
+</script>
+</head>
+<body>
+
+	<div class="test">你</div>
+	<div class="test">好</div>
+	<div class="test">吗</div>
+	<div class="test">？</div>
+
+
+	<input type="button" class="show" value="显示" />
+	<input type="button" class="hide" value="隐藏" />
+	<input type="button" class="toggle" value="切换" />
+
+	<input type="button" class="up" value="上" />
+	<input type="button" class="down" value="下" />
+	<input type="button" class="toggle" value="切换" />
+	<input type="button" class="in" value="淡入">
+	<input type="button" class="out" value="淡出">
+	<input type="button" class="toggle" value="切换">
+	<input type="button" class="to" value="透明度到">
+	<div id="box">box</div>
+</body>
+</html>

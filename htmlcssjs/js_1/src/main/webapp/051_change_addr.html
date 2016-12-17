@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>换目的地</title>
+<style type="text/css">
+ .container{
+    width:300px;
+    position: relative;
+    overflow: hidden;
+ }
+ .row{
+   width:80%
+ }
+ .row .lf{float:left;width:40%}
+  .row .rf{float:left;width:60%}
+  #myImg{left:-60px;top:-80px; position: absolute;}
+  #myDiv{
+    position:absolute;
+    width: 20px;
+    height: 60px;
+    overflow: hidden;
+    right: 0px;
+    cursor:pointer;
+  }
+  
+</style>
+</head>
+<body >
+ <div class="container">
+   <div  class="row">
+     <div class="lf">
+       <label>出发地</label>
+     </div>
+     <div class="rf">
+       <input  name="cf" id="cf" value="北京">
+     </div>
+   </div>
+    <div  class="row">
+     <div class="lf">
+     <label>目的地</label>
+     </div>
+     <div class="rf">
+      <input  name="md" id="md" value="上海">
+     </div>
+     
+   </div>
+     <div id="myDiv" >
+       <img alt="" src="img/bg02.png"  id="myImg">
+     </div>
+ </div>
+ <script type="text/javascript">
+   document.getElementById("myDiv").addEventListener("click", function(){
+          var cf=document.getElementById("cf");
+          var md=document.getElementById("md");
+          var temp=cf.value;
+          cf.value=md.value;
+          md.value=temp;
+	   });
+ </script>
+</body>
+</html>

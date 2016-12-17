@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>网页时钟</title>
+</head>
+<body>
+	<span id="mySpan"></span>
+	<script type="text/javascript">
+		window.setTimeout(showDateTime, 1000);
+		function showDateTime() {
+			var mySpan = document.getElementById("mySpan");
+			var now = new Date();
+			var str = now.getFullYear() + "年" + (now.getMonth() + 1) + "月"
+					+ now.getDate() + " " + now.getHours() + ":"
+					+ now.getMinutes() + ":" + now.getSeconds();
+			mySpan.innerHTML = str;
+			window.setTimeout(showDateTime, 1000);
+		}
+	</script>
+</body>
+</html>

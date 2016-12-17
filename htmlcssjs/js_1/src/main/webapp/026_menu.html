@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>上下文菜单</title>
+<style type="text/css">
+.menu {
+	background-color: #e5e5e5;
+	display: none;
+	position: absolute;
+	border: 1px solid red;
+}
+
+.menu ul {
+	padding: 0px;
+	list-style-type: none;
+}
+
+.menu ul li {
+	margin: 5px;
+}
+
+.menu button {
+	border: 0px;
+}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		/*window.oncontextmenu=function(){
+		          return false;
+		  }*/
+		window.oncontextmenu = function(event) {
+			//阻止默认行为
+			event.preventDefault();
+			document.getElementById("myCtx").style.display = "block";
+			document.getElementById("myCtx").style.left = event.clientX + "px";
+			document.getElementById("myCtx").style.top = event.clientY + "px";
+
+		}
+		window.onclick = function() {
+			document.getElementById("myCtx").style.display = "none";
+		}
+	</script>
+	<div class="menu" id="myCtx">
+		<ul>
+			<li><button onclick="document.body.style.backgroundColor='red'">改变背景</button></li>
+			<li><button onclick="document.body.style.backgroundColor=''">恢复背景</button></li>
+		</ul>
+	</div>
+</body>
+</html>

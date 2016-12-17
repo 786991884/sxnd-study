@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>servlet</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>InitExample</servlet-name>
+		<servlet-class>servlet03.InitExample</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Ladies and GentLemen</param-value>
+		</init-param>
+		<init-param>
+			<param-name>message</param-name>
+			<param-value>Welcome to Servlet World!</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InitExample</servlet-name>
+		<url-pattern>/InitExample</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>JDBCServlet</servlet-name>
+		<servlet-class>servlet04.JDBCServlet</servlet-class>
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+		<init-param>
+			<param-name>url</param-name>
+			<param-value>jdbc:mysql://localhost:3306/test</param-value>
+		</init-param>
+		<init-param>
+			<param-name>user</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>1234</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JDBCServlet</servlet-name>
+		<url-pattern>/JDBCServlet</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>first</filter-name>
+		<filter-class>servlet06.FirstFilter</filter-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>张三</param-value>
+		</init-param>
+		<init-param>
+			<param-name>doST</param-name>
+			<param-value>Hello Filter</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>first</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>listener07.MyListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>listener07.RequestListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>listener07.RequestAttributeListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>listener07.SessionListener</listener-class>
+	</listener>
+</web-app>

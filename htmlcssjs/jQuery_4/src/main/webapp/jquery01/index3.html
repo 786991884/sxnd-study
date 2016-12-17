@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+/* #box {
+	color: red;
+	//
+	添加一个样式
+}
+
+div {
+	color: orange;
+}
+
+.pox {
+	color: red;
+}
+
+#box {
+	color: red;
+}
+
+#box>p {
+	color: red;
+} */
+</style>
+<script type="text/javascript">
+	$(function() {
+		//$('#box').css('color', 'blue');//添加一个行为，这个行为是添加样式
+		//$('div').css('color', 'maroon');
+		//$('.pox').css('color', 'green');
+		//$('#box').css('color', 'red')
+		//alert($('#box').size());1
+		//alert($('#pox').size());0
+		//alert($('div').size());
+		//alert($('div').length);
+		//$('#box'>p).css('color','red');
+		//$('div').eq(0).css('color','red');
+		/* if (document.getElementById("box")) {
+			document.getElementById('box').style.color='red';
+		} */
+		//很多情况下有动态DOM生成的问题，会导致执行不存在的ID选择器
+		//$('#pox').css('color','red');
+		/* 	if ($('#pox').size() > 0) {
+				$('#pox').css('color', 'green');
+			} */
+		//if ($('#pox').get(0)) {
+		//	...
+		//}
+		//if ($('#pox')[0]) {
+		//	...
+		//}
+	});
+</script>
+</head>
+<body>
+	<div id="box">常规选择器</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- <constant name="struts.enable.DynamicMethodInvocation" value="false" 
+		/> -->
+	<!-- 声明包 -->
+	<package name="myPackage" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="publis" class="interceptor.PublisInterceptor"></interceptor>
+			<interceptor name="method" class="interceptor.MethodInterceptor"></interceptor>
+		</interceptors>
+		<!-- 定义action -->
+		<action name="first">
+			<!-- 定义处理成功后的映射页面 -->
+			<result>/first.jsp</result>
+		</action>
+		<action name="userAction" class="com.action.UserAction">
+			<!-- 添加成功的映射页面 -->
+			<result name="add">user_add.jsp</result>
+			<!-- 更新成功的映射页面 -->
+			<result name="update">user_update.jsp</result>
+		</action>
+		<action name="greeting" class="com.action.GreetingAction">
+			<result name="success">success.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="testAction" class="com.action.TestAction">
+			<!-- 处理成功的映射页面 -->
+			<result>success4.jsp</result>
+		</action>
+		<action name="login" class="com.xbh.LoginAction">
+			<result name="success">/welcome.jsp</result>
+		</action>
+		<action name="regist" class="com.action.ZhuceAction">
+			<result name="success">/welcome.jsp</result>
+			<result name="input">/index.jsp</result>
+		</action>
+		<action name="mylogin" class="action.UserAction" method="mylogin">
+			<result name="success">/page01/success.jsp</result>
+			<result name="error">/page01/error.jsp</result>
+		</action>
+		<action name="mylogin" class="action.UserAction" method="execute">
+			<result name="success">/page03/success.jsp</result>
+			<result name="error">/page03/error.jsp</result>
+		</action>
+		<action name="modellogin" class="action.UserAction3">
+			<result name="success">/page03/success.jsp</result>
+			<result name="error">/page03/error.jsp</result>
+			<!-- <interceptor-ref name="modelDrivenStack" /> -->
+		</action>
+		<action name="login3_4" class="action.UserAction3_4">
+			<result>/page03/success3_4.jsp</result>
+			<result name="error">/page03/error3_4.jsp</result>
+			<interceptor-ref name="modelDrivenStack" />
+		</action>
+		<action name="login3_5" class="action.UserAction3_5">
+			<result>/page03/success3_5.jsp</result>
+			<result name="error">/page03/error3_5.jsp</result>
+			<interceptor-ref name="modelDrivenStack" />
+		</action>
+		<action name="login3_6" class="action.UserAction3_6">
+			<result>/page03/success3_6.jsp</result>
+			<result name="error">/page03/error3_6.jsp</result>
+			<interceptor-ref name="modelDrivenStack" />
+		</action>
+		<action name="login3_7" class="action.UserAction3_7">
+			<result>/page03/success3_6.jsp</result>
+			<result name="error">/page03/error3_6.jsp</result>
+			<interceptor-ref name="modelDrivenStack" />
+		</action>
+		<action name="login4" class="action.UserAction4">
+			<result>/page04/index.jsp</result>
+			<result name="input">/page04/login.jsp</result>
+		</action>
+		<action name="login4_2" class="action.UserAction4_2" method="login">
+			<result>/page04/index.jsp</result>
+			<result name="input">/page04/login.jsp</result>
+		</action>
+		<action name="login4_3" class="action.UserAction4_3" method="login">
+			<result>/page04/index.jsp</result>
+			<result name="input">/page04/login.jsp</result>
+		</action>
+		<action name="login4_4" class="action.UserAction4_4" method="login">
+			<result>/page04/index.jsp</result>
+			<result name="input">/page04/login.jsp</result>
+		</action>
+
+		<action name="method*" class="action.MethodAction" method="method{1}">
+			<result>/page05/method.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="method">
+				<param name="includeMethods">method1</param>
+				<param name="excludeMethods">method2,emthod3,method4</param>
+			</interceptor-ref>
+		</action>
+		<action name="publis" class="action.PublisAction">
+			<interceptor-ref name="publis"></interceptor-ref>
+			<result>/page05/index.jsp</result>
+		</action>
+		<action name="ognlAction" class="action.OgnlAction">
+			<result>/page06/ognl.jsp</result>
+		</action>
+	</package>	<!-- <package name="user" namespace="/" extends="struts-default"> <action 
+		name="*user" class="action.UserAction" method="{1}"> <result>/success.jsp</result> 
+		<result name="error">/error.jsp</result> </action> </package> -->
+	<package name="user" extends="struts-default" namespace="/user">
+		<action name="userLogin" class="action.UserLogin">
+			<result name="ok" type="redirect">/page02/hello.jsp</result>
+			<result name="error">/page02/error.jsp</result>
+		</action>
+	</package>
+	<!-- <include file="struts-hello.xml"></include> -->
+</struts>

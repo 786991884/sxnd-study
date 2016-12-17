@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana, Tahoma, Arial, 宋体;
+	font-size: 13px;
+	overflow: hidden;
+}
+
+div u1 {
+	list-style-image: url(../images/ul_li.jpg);
+}
+
+#container {
+	margin: auto;
+	border-left: #67a21b solid 1px;
+	border-right: #67a21b solid 1px;
+}
+
+#middle {
+	background-color: #67a21b;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="" name="myfrm">
+姓名:<input name="uname" ><br>
+<!-- 有时间我们希望向服务器提交数据，但是不想让用户看到了时候，就可以使用该类型 -->
+<input type="hidden" name="id" value="222">
+<!-- 创建按钮的，比如有如下应用：首先要对用户输入进行验证，如果验证木有通过，就不提交表单 -->
+<input type="button" value="按钮" onclick="myfrm.submit()">
+<!-- 提交的是点击的坐标 -->
+<input type="image" src="img/my.gif" name="xxx">
+
+</form>
+</body>
+</html>

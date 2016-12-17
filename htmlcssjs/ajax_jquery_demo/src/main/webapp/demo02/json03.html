@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a simple example</title>
+<script type="text/javascript">
+var strObj = '{"name":"wangwu"}';
+var jsonObj = JSON.parse(strObj);
+alert(strObj);//string
+alert(jsonObj);//object
+alert(jsonObj.name);
+
+//eval
+var strObj1 = "{'age': '21-1'}";
+var jsonObj1 = eval("(" + strObj1 + ")");
+alert(jsonObj1.age);
+</script>
+</head>
+<body>
+
+</body>
+</html>

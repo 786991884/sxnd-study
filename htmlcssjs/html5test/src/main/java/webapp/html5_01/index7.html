@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body style="font: 75% Lucida Grande, Trebuchet MS">
+	<div class="weekday">
+		<ul>
+			<li>Concert</li>
+			<li>Shopping</li>
+			<li>Work</li>
+		</ul>
+	</div>
+	<div class="weekday">
+		<ul>
+			<li>Gym</li>
+			<li>Dance</li>
+			<li>Theater</li>
+		</ul>
+	</div>
+	<script>
+		// Native getElementsByClassName
+		var els = document.getElementsByClassName('weekday');
+		var i = els.length;
+		while (i--) {
+			els[i].style.backgroundColor = '#ccc';
+		}
+
+		// Finding elements with CSS syntax (Selectors API)
+		els = document.querySelectorAll("ul li:nth-child(odd)");
+		i = els.length;
+		while (i--) {
+			els[i].style.backgroundColor = '#ffa8a8';
+		}
+	</script>
+</body>
+</html>

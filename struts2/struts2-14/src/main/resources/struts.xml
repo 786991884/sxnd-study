@@ -1,0 +1,71 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources"></constant>
+	<!-- 声明常量（开发模式） -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 声明常量(在Struts2的配置文件修改后，自动加载) -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<package name="myPackage" extends="struts-default" namespace="/">
+		<!-- 定义action -->
+		<action name="ognl" class="com.action.OGNLAction">
+			<!-- 结果映射 -->
+			<result name="success">success.jsp</result>
+		</action>
+		<action name="testAction" class="com.action.TestAction">
+			<!-- 配置拦截器 -->
+			<interceptor-ref name="timer"></interceptor-ref>
+			<!-- 配置返回页面 -->
+			<result>success2.jsp</result>
+		</action>
+		<action name="userAction" class="com.action.UserAction">
+			<!-- 注册成功的返回页面 -->
+			<result>success3.jsp</result>
+		</action>
+		<action name="usersAction" class="com.action.UsersAction">
+			<!-- 用户登录页面 -->
+			<result name="input">/login.jsp</result>
+			<!-- 注册成功页面 -->
+			<result>/success4.jsp</result>
+		</action>
+		<action name="con" class="com.action.ItxAction">
+			<result>/index7.jsp</result>
+		</action>
+		<action name="regAction" class="action.RegUserAction">
+			<result name="success">/page07/regWelcome.jsp</result>
+		</action>
+		<action name="orderList" class="action.BookListAction">
+			<result name="success">/page07/bookList.jsp</result>
+		</action>
+		<action name="orderMap" class="action.BookMapAction">
+			<result name="success">/page07/bookMap.jsp</result>
+		</action>
+		<action name="orderSet" class="action.BookSetAction">
+			<result name="success">/page07/bookSet.jsp</result>
+		</action>
+		<action name="regStudent" class="action.StudentAction">
+			<result name="success">/studentInfo.jsp</result>
+		</action>
+		<!-- 第一个Action使用CalcAction的execute()方法作为处理逻辑 -->
+		<action name="logic1" class="action.CalcAction" method="execute">
+			<result name="done">/page08/succ.jsp</result>
+		</action>
+		<!-- 第二个Action使用CalcAction的calc()方法作为处理逻辑 -->
+		<action name="logic2" class="action.CalcAction" method="calc">
+			<result name="done">/page08/calcSucc.jsp</result>
+		</action>
+		<action name="loginAction" class="action.LoginAction">
+			<result name="loginSuccess">/page10/welcome.jsp</result>
+			<result name="loginFailure">/page10/failure.jsp</result>
+			<result name="input">/page10/login.jsp</result>
+		</action>
+		<action name="registerAction" class="action.RegisterAction">
+			<result name="input">/page10/register.jsp</result>
+			<result name="success">/page10/regSucess.jsp</result>
+		</action>
+	</package>
+</struts>

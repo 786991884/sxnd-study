@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>闭包</title>
+</head>
+<body>
+<script type="text/javascript">
+var y=20;
+  function foo(){
+   var x=10;
+   function bar(){
+	   console.log(x);
+	   console.log(y);
+	}
+	return bar;
+  }
+  //按理说，我们调用结束了，它的局部变量应该不在了
+ var return_fun=foo();
+ return_fun();
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author" content="南阳德刚">
+<title>完整版图片轮换</title>
+<style type="text/css">
+div {
+	position: relative;
+	width: 730px;
+}
+
+ul {
+	list-style-type: none;
+	position: absolute;
+	bottom: 30px;
+}
+
+li.on {
+	background-color: red;
+}
+
+ul li {
+	float: left;
+	border: 1px solid red;
+	margin-right: 10px;
+	width: 23px;
+}
+</style>
+</head>
+<body style="text-align: center;">
+	<div>
+		<img alt="" src="img/1.jpg" id="myImg" onmouseover="stopChange()" onmouseout="startChange()">
+		<ul id="myUl">
+			<li class="on">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var index = 1;
+		var timerId;
+		var ul = document.getElementById("myUl");
+		//标签名字
+		var lis = ul.getElementsByTagName("li");
+		//清除已有样式
+		function changeImg() {
+			index++;
+			if (index == 5) {
+				index = 1;
+			}
+			document.getElementById("myImg").src = "img/" + index + ".jpg";
+			for (var i = 0; i < lis.length; i++) {
+				//lis[i].style.backgroundColor = "gray";
+				lis[i].className = "";
+			}
+			//lis[index - 1].style.backgroundColor = "red";
+			lis[index - 1].className = "on";
+		}
+		//当你的代码不放置在方法中，页面加载后立马
+		timerId = window.setInterval(changeImg, 1000);
+		function stopChange() {
+			window.clearInterval(timerId);
+		}
+		function startChange() {
+			timerId = window.setInterval(changeImg, 1000);
+		}
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].addEventListener("mouseover", function(e) {
+				//停止切换
+				window.clearInterval(timerId);
+				//切换到对应的图片
+				//2.1得到那张图片
+				index = window.parseInt(this.innerHTML);
+				//2.2换src
+				document.getElementById("myImg").src = "img/" + index + ".jpg";
+				//2.3指示当前图片
+				for (var i = 0; i < lis.length; i++) {
+					//lis[i].style.backgroundColor = "gray";
+					lis[i].className = "";
+				}
+				//lis[index - 1].style.backgroundColor = "red";
+				lis[index - 1].className = "on";
+			});
+			lis[i].addEventListener("mouseout", function(e) {
+				timerId = window.setInterval(changeImg, 1000);
+			});
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<!-- 常量，修改struts2的和行为 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<package name="basicstruts2" extends="struts-default">
+		<action name="doList" class="com.oraclewdp.action.ListAction">
+			<result>/List_success.jsp</result>
+		</action>
+		<action name="doMap" class="com.oraclewdp.action.MapAction">
+			<result>/Map_success.jsp</result>
+		</action>
+	</package>
+</struts>

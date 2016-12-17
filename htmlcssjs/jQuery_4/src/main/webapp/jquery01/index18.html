@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>事件对象</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.bg {
+	background-color: #ccc;
+}
+
+.size {
+	font-size: 20px;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+		//冒泡和阻止冒泡
+		/* $('input').click(function() {
+			e.stopPropagation();//禁止冒泡
+			alert('input');
+		});
+		$('div').click(function(e) {
+			e.stopPropagation();
+			alert('div');
+		});
+		$(document).click(function() {
+			alert('document');
+		});
+		$('a').click(function() {
+			e.preventDefault();//阻止默认行为
+		}); */
+		/* $('input').click(function() {
+			e.preventDefault();
+			alert('表单提交');
+		});
+		$('form').submit(function(e) {
+			e.preventDefault();
+		});
+		//阻止冒泡又禁止了默认行为
+		$('a').click(function(e) {
+			alert('ycku.com');
+			return false;
+		});
+		$('div').click(function() {
+			alert('div');
+		});
+
+		$(document).click(function() {
+			alert('document');
+		});
+		$('a').click(function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			alert(e.isDefaultPrevented());
+			alert(e.isPropagationStopped());
+		});
+
+		$('a').click(function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+		});
+
+		$('a').click(function(e) {
+			alert(e.isDefaultPrevented());
+			alert(e.isPropagationStopped());
+		}); */
+		$('a').click(function() {
+			e.sotpImmediatePropagation();
+			alert(e.isImmediatePropagationStopped());
+			alert('a1');
+		});
+		$('a').click(function(e) {
+			alert('a2');
+		});
+
+		$('div').click(function(e) {
+			alert('div');
+		});
+
+		$(document).click(function() {
+			alert('document');
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="123.html">
+		<div style="width: 200px; height: 200px; background: #ccc;">
+			<input type="submit" value="按钮" /> <a href="http://www.ycku.com"
+				target="_blank">ycku.com</a>
+		</div>
+	</form>
+</body>
+</html>

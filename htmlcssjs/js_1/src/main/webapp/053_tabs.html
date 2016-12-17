@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tabs制作</title>
+<style type="text/css">
+.tabs_container {
+	border: 1px solid #e5e5e5;
+	overflow: hidden;
+	width: 30%;
+}
+
+.tabs_container ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.tabs_container ul li {
+	float: left;
+}
+
+.tabs_container .tabs_content {
+	clear: both;
+}
+
+.tabs_header {
+	background-color: #e5e5e5;
+	overflow: hidden;
+}
+
+.tabs_header ul li {
+	width: 33.3%;
+	text-align: center;
+}
+
+.tabs_header ul li.sel {
+	background-color: white;
+	font-weight: bold;
+}
+
+.tabs_content ul li {
+	display: none;
+}
+
+.tabs_content ul li.sel {
+	display: block;
+}
+</style>
+</head>
+<body>
+	<div class="tabs_container">
+		<div class="tabs_header">
+			<ul>
+				<li class="sel" idx='1'>a</li>
+				<li idx='2'>b</li>
+				<li idx='3'>c</li>
+			</ul>
+		</div>
+		<div class="tabs_content">
+			<ul>
+				<li class="sel">content a</li>
+				<li>content b</li>
+				<li>content c</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+	//页面加载时候执行，把循环做完以后就是i=3,当你点击有响应时，说明已经绑定了事件，
+		var headLis = document.querySelectorAll(".tabs_header ul li");
+		for (var i = 0; i < headLis.length; i++) {
+			headLis[i].addEventListener(
+							"mouseover",
+							function(e) {
+								console.log(i);
+								//清除样式
+								document.querySelector('.tabs_header ul li.sel').className = "";
+								document.querySelector('.tabs_content ul li.sel').className = "";
+								this.className = "sel";
+								document.querySelectorAll(".tabs_content ul li")[this.getAttribute('idx') - 1].className = "sel";
+							});
+		}
+	</script>
+</body>
+</html>

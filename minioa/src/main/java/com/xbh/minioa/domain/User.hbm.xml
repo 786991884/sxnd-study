@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-6-3 19:57:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.xbh.minioa.domain.User" table="`USER">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="loginName" type="java.lang.String">
+			<column name="LOGINNAME" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="PASSWORD" />
+		</property>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="gender" type="java.lang.String">
+			<column name="GENDER" />
+		</property>
+		<property name="phoneNumber" type="java.lang.String">
+			<column name="PHONENUMBER" />
+		</property>
+		<property name="email" type="java.lang.String">
+			<column name="EMAIL" />
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="DESCRIPTION" />
+		</property>
+		<!-- department属性，本类与Department的多对一 -->
+		<many-to-one name="department" class="com.xbh.minioa.domain.Department" fetch="join">
+			<column name="departmentId" />
+		</many-to-one>
+		<!-- roles属性，本类与Role的多对多 -->
+		<set name="roles" table="user_role" inverse="false" lazy="false">
+			<key>
+				<column name="userId" />
+			</key>
+			<many-to-many class="com.xbh.minioa.domain.Role" column="roleId" />
+		</set>
+
+	</class>
+</hibernate-mapping>

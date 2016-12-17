@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件绑定方法</title>
+</head>
+<body >
+<h1>xxxxxxxxxxx</h1>
+ <script type="text/javascript">
+ //采用这种方式可以绑定多个
+   //document.body.addEventListener("click", function(){alert('sb1');});
+   //document.body.addEventListener("click", function(){alert('sb2');});
+   //采用这种方式只能最后一次起作用
+   document.body.onclick=function(){
+      alert("sb1");
+   }
+   document.body.onclick=function(){
+	      alert("sb2");
+	}
+ </script>
+</body>
+</html>

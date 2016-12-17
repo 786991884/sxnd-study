@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>全选案例</title>
+</head>
+<body>
+
+	<ul id="myUl">
+		<li>全选<input type="checkbox" id="selAll" onclick="sel()"></li>
+		<li><input type="checkbox" name="ck">1</li>
+		<li><input type="checkbox" name="ck">2</li>
+		<li><input type="checkbox" name="ck">3</li>
+		<li><input type="checkbox" name="ck">4</li>
+	</ul>
+	<script type="text/javascript">
+		function sel() {
+			//当全选按钮选中时，ul下的所有checkbox都要选中；反正所有checkbox都要取消选中
+			var selCk = document.getElementById("selAll");
+			var isCk = selCk.checked;
+			if (isCk) {
+				// var ul=document.getElementById("myUl");
+				//var cks=ul.getElementsByTagName("checkbox");
+				var cks = document.getElementsByName("ck");
+				for (var i = 0; i < cks.length; i++) {
+					cks[i].checked = true;
+				}
+			} else {
+				var cks = document.getElementsByName("ck");
+				for (var i = 0; i < cks.length; i++) {
+					cks[i].checked = false;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

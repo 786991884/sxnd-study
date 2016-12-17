@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Video</title>
+</head>
+<body>
+	<video id="video_with_controls" width="320" controls autobuffer>
+		<source
+			src="http://playground.html5rocks.com/samples/html5_misc/chrome_japan.webm"
+			type='video/webm; codecs="vp8, vorbis"' />
+		<source
+			src="http://playground.html5rocks.com/samples/html5_misc/chrome_japan.mp4"
+			type="video/mp4" />
+		<source
+			src="http://playground.html5rocks.com/samples/html5_misc/chrome_japan.ogv"
+			type='video/ogg; codecs="theora, vorbis"' />
+		Your browser does not support the video tag
+	</video>
+	<!-- some actions from Javascript -->
+	<button id="play">播放</button>
+	<button id="pause">暂停</button>
+	<button id="duration">显示长短</button>
+	<div id="duration-log"></div>
+	<script>
+		var movie = document.getElementById('video_with_controls');
+		document.getElementById('play').addEventListener('click', function() {
+			movie.play();
+		}, false);
+		document.getElementById('pause').addEventListener('click', function() {
+			movie.pause();
+		}, false);
+		document
+				.getElementById('duration')
+				.addEventListener(
+						'click',
+						function() {
+							document.querySelector('#duration-log').textContent = movie.duration;
+						}, false);
+	</script>
+</body>
+</html>

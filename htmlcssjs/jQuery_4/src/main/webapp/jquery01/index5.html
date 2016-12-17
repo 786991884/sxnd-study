@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+/*
+#box > p {
+	color:red;
+}
+#box + p {
+	color:green;
+}
+#box ~ p {
+	color:red;
+}
+*/
+</style>
+<script type="text/javascript">
+	$(function() {
+		//$('#box p').css('color', 'red');
+		//find()方法
+		//$('#box').find('p').css('color', 'red');
+		//$('#box>p').css('color', 'red');
+		//$('#box').children('p').css('color', 'red');
+		//$('#box + p').css('color', 'blue');
+		//next()方法
+		//$('#box').next('p').css('color','maroon');
+		//$('#box ~ p').css('color', 'orange');
+		//nextAll()方法
+		//$('#box').nextAll('p').css('color', 'maroon');
+		//$('#box').next('*').css('color', 'maroon');//next()等选择器方法不传参，就相当于传递了*号，
+		//如果*在某个环境里有所浪费，建议尽量不去使用
+		//prev
+		//$('#box').prev('p').css('color', 'red');
+		//prevAll
+		//$('#box').prevAll('p').css('color', 'red');
+		//$('#box').prevAll('p').css('color', 'red');
+		//$('#box').nextAll('p').css('color', 'red');
+		//$('#box').prevAll('p').nextAll('p').css('color', 'red'); 错误的形式
+		//siblings上下同级所有
+		//$('#box').siblings('p').css('color', 'blue');
+		//nextUntil()方法
+		$('#box').nextUntil('p').css('color', 'red');
+		//prevUntil()方法
+		$('#box').prevUntil('p').css('color', 'red');
+	});
+</script>
+</head>
+<body>
+	<strong>strong</strong>
+	<strong>strong</strong>
+	<strong>strong</strong>
+	<p>p2</p>
+	<strong>strong</strong>
+	<strong>strong</strong>
+	<strong>strong</strong>
+	<div id="box">
+		div <strong>strong</strong> <strong>strong</strong> <strong>strong</strong>
+	</div>
+	<p>p1</p>
+	<strong>strong</strong>
+	<strong>strong</strong>
+	<strong>strong</strong>
+</body>
+</html>

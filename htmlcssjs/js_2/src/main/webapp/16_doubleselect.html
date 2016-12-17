@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function move(opertion) {
+		var lsel = document.getElementById("leftSel");
+		var rsel = document.getElementById("rightSel");
+		//添加全部
+		if (opertion == ">>") {
+
+			while (lsel.options.length > 0) {
+				//从左边移动一个option添加到右边
+				var delElem = lsel.removeChild(lsel.options[0]);
+				rsel.appendChild(delElem);
+			}
+		}
+		if (opertion == "<<") {
+
+			while (rsel.options.length > 0) {
+				//从左边移动一个option添加到右边
+				var delElem = rsel.removeChild(rsel.options[0]);
+				lsel.appendChild(delElem);
+			}
+		}
+		//添加被选中的项目
+		if (opertion==">") {
+		while (lsel.selectedIndex!=-1) {
+			
+		  var delElem=lsel.removeChild(lsel.options[lsel.selectedIndex]);
+		  rsel.appendChild(delElem);
+		}
+		}
+		if (opertion=="<") {
+		while (rsel.selectedIndex!=-1) {
+			
+		  var delElem=rsel.removeChild(rsel.options[rsel.selectedIndex]);
+		  lsel.appendChild(delElem);
+		}
+		}
+	}
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td rowspan="4"><select multiple="multiple" style="width: 100px; height: 200px;" id="leftSel">
+					<option>项目1</option>
+					<option>项目2</option>
+					<option>项目3</option>
+					<option>项目4</option>
+			</select></td>
+
+			<td><input type="button" value="Add>" onclick="move('>')"></td>
+			<td rowspan="4"><select multiple="multiple" style="width: 100px; height: 200px;" id="rightSel">
+
+			</select></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Remove<" onclick="move('<')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Add All>>" onclick="move('>>')">
+		</tr>
+		<tr>
+			<td><input type="button" value="Remove All<<" onclick="move('<<')"></td>
+		</tr>
+	</table>
+
+
+
+
+
+
+</body>
+</html>

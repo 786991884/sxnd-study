@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/cookies.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+//如果该值已经保存就返回一个非空字符串
+  var a=Cookies.get("theme");
+  alert(typeof a);
+  //若木有保存，就返回undefined
+  var b=Cookies.get("theme1");
+  console.log(a);
+  console.log(b);
+</script>
+</body>
+</html>

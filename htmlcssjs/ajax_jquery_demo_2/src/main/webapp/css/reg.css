@@ -1,0 +1,55 @@
+#register #name,#pwd1,#pwd2,#question,#answer,#realname,#card,#tel,#phone,#qq,#email,#code,#address
+	{
+	height: 16px;
+	width: 200px;
+	border: 1px solid #003399;
+	background-color: #e8f4ff;
+}
+
+#register #yzm {
+	height: 16px;
+	width: 50px;
+	border: 1px solid #003399;
+	background-color: #e8f4ff;
+}
+
+#register #name1,#pwd11,#pwd21,#question1,#answer1,#realname1,#card1,#tel1,#phone1,#qq1,#email1,#code1,#address1,#yzm1
+	{
+	background-color: #f0f0f0;
+	padding-top: 6px;
+	padding-left: 6px;
+	height: 18px;
+	width: 175px;
+	border: 1px dotted #CCCCCC;
+}
+
+body,td,th {
+	font-size: 12px;
+}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+a {
+	font-size: 12px;
+}

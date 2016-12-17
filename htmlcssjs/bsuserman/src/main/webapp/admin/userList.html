@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户列表页面</title>
+<!--两点表示上一层目录  -->
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<style type="text/css">
+.pagination{
+ margin-top: 0px;
+}
+</style>
+</head>
+<body>
+	<!-- search box -->
+	<div class="container" style="width: 100%"> 
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<form role="form" action="userList.html">
+
+
+					<div class="row">
+						<div class="col-lg-4 col-sm-4">
+							<div class="input-group">
+								<span class="input-group-addon"> 用户名： </span> <input type="text" class="form-control" name="name">
+							</div>
+							<!-- /input-group -->
+						</div>
+						<!-- /.col-lg-6 -->
+						<div class="col-lg-4  col-sm-4">
+							<div class="input-group">
+								<span class="input-group-addon"> 密码 </span> <input type="text" class="form-control" name="pwd">
+							</div>
+							<!-- /input-group -->
+						</div>
+						<!-- /.col-lg-6 -->
+						<div class="col-lg-4  col-sm-4">
+							<div class="input-group">
+								<input type="submit" class="form-control" value="搜索">
+							</div>
+							<!-- /input-group -->
+						</div>
+					</div>
+					<!-- /.row -->
+
+
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- user list -->
+	<div class="container" style="width: 100%">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<table class="table table-bordered  table-hover">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>用户名</th>
+							<th>Email</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>z3</td>
+							<td>1@qq.com</td>
+							<td><a href="userDel.html"><i class="glyphicon glyphicon-trash"></i></a> <a href="userDel.html"><i
+									class="glyphicon glyphicon-plus"></i></a></td>
+						</tr>
+						<tr class="active">
+							<td>2</td>
+							<td>l4</td>
+							<td>2@qq.com</td>
+							<td><a href="userDel.html"><i class="glyphicon glyphicon-trash"></i></a> <a href="userDel.html"><i
+									class="glyphicon glyphicon-plus"></i></a></td>
+						</tr>
+						<tr class="success">
+							<td>3</td>
+							<td>w5</td>
+							<td>3@qq.com</td>
+							<td><a href="userDel.html"><i class="glyphicon glyphicon-trash"></i></a> <a href="userDel.html"><i
+									class="glyphicon glyphicon-plus"></i></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- pager -->
+	<div class="container" style="width: 100%">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+			
+			
+
+<ul class="pagination">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+
+			
+			</div>
+			</div>
+			</div>
+</body>
+</html>

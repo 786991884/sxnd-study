@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>全局变量</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//console.log(window.document===document);//如果要使用的属性或方法属于window对象可以不用加
+		//在全局变量中，为了提高可读性，一定要加上var
+		var x = 1;
+		//console.log(window.x===x);
+		function test() {
+			var n1 = 10;
+			n2 = 20;//如果方法中省略了var,就是全局变量了
+			for (var i = 0; i < 2; i++) {
+
+			}
+			console.log(i);//2木有块作用于这个说法
+		}
+		test();
+		//console.log(n1);
+		console.log(n2);
+	</script>
+</body>
+</html>

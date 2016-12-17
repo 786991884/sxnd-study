@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件传播机制</title>
+<style type="text/css">
+* {
+	border: 1px solid red;
+}
+</style>
+</head>
+<body>
+	<div id="myDiv">
+		<button id="myBtn">单击</button>
+	</div>
+	<script type="text/javascript">
+		//写上TRUE表示要在捕获阶段调用的你函数
+		document.body.addEventListener("click", function(event) {
+			console.log("body false");
+		}, false);
+		document.body.addEventListener("click", function(event) {
+			console.log("body true");
+			event.stopPropagation();//你希望不继续传递就调用该方法
+		}, true);
+		document.getElementById("myDiv").addEventListener("click",
+				function(event) {
+					console.log("div true");
+				}, true);
+		document.getElementById("myDiv").addEventListener("click",
+				function(event) {
+					console.log("div false");
+				}, false);
+		document.getElementById("myBtn").addEventListener("click",
+				function(event) {
+					console.log("button true");
+				}, true);
+		document.getElementById("myBtn").addEventListener("click",
+				function(event) {
+					console.log("button false");
+				}, false);
+	</script>
+</body>
+</html>

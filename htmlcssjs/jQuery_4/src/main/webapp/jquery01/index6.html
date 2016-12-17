@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(function() {
+		//$('#box p').css('color', 'red');
+		//$('p', '#box').css('color', 'blue');
+		//$('p', $('#box')).css('color', 'orange'
+		//$('a[title]').css('color', 'red');
+		//$('a[title=num1]').css('color', 'red');
+		//$('a[title^=num]').css('color', 'red');
+		//$('a[title$=num]').css('color', 'red');
+		$('a[title|=num]').css('color', 'red');
+		//$('a[title~=aaa]').css('color', 'red');
+		//$('a[title*=num]').css('color', 'red');
+		//$('a[bbb][title=num]').css('color', 'red');
+	});
+</script>
+</head>
+<body>
+	<a title="num1">num1</a>
+	<a>num2</a>
+	<a>num3</a>
+	<a title="no4">num4</a>
+	<a title="num">num5</a>
+</body>
+</html>

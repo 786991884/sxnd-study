@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div:BEFORE {
+    position:absolute;
+	width: 0px;
+	height: 0px;
+	border-width:10px 10px 0px;
+	border-color:black transparent;
+	border-style:solid;
+	content: "";
+	bottom: -10px;
+	left: 50%;
+}
+
+div:AFTER {
+	content: "";
+	position:absolute;
+	width: 0px;
+	height: 0px;
+	border-width:10px 10px 0px;
+	border-color:#e5e5e5 transparent;
+	border-style:solid;
+	content: "";
+	bottom: -9px;
+	left: 50%;
+}
+div{
+ position: relative;
+ border: 1px solid black;
+ width: 100px;
+ padding: 10px;
+ border-radius:2px;
+ background-color: #e5e5e5;
+}
+</style>
+</head>
+<body>
+	<div>中国</div>
+</body>
+</html>

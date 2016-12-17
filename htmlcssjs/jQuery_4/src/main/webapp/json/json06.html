@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>使用eval函数将JSON文本转换成JSON对象时的安全问题</title>
+<script type="text/javascript">
+	function fun_test() {
+		//输入：json
+		//输入：","":(function(){alert('嘿嘿，你被XSS攻击了！！！')})(),"":"
+		var un = document.getElementById("uname").value;
+		var s = '{"uname":"' + un + '"}';
+		var jsObj = eval('(' + s + ')');
+		alert(jsObj.uname);
+	}
+</script>
+</head>
+
+<body>
+	<input id="uname" onblur="fun_test()" />
+</body>
+</html>

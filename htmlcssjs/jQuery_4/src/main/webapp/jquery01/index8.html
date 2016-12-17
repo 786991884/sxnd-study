@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>过滤器选择器</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(function() {
+		//$('li:first-child').css('background', '#ccc');
+		//$('li:last-child').css('background', '#ccc');
+		//$('li:only-child').css('background', '#ccc');
+		//$('li:nth-child(even)').css('background', '#ccc');
+		//$('li:nth-child(odd)').css('background', '#ccc');
+		//$('li:nth-child(5n)').css('background', '#ccc');
+		//$('li:nth-child(4n-1)').css('background', '#ccc');
+		//alert($('.red').is('li'));
+		//alert($('.red').is('div'));
+		//alert($('.red').is($('li')));
+		//alert($('.red').is($('div')));
+		//alert($('.red').is($('li').get(2)));
+		//alert($('.red').is($('li').eq(2)));
+		/* alert($('.red').is(function() {
+			return $(this).attr('title') == '列表3';
+		})); */
+		//注意，必须使用$(this)来表示判断的元素，否则，不管function里面是否返回true或false都和调用的元素无关了
+		//alert($('li').eq(2).hasClass('red'));
+		//$('li').slice(5,7).css('background','pink');
+		//$('li').slice(2).css('background', '#ccc');
+		//$('li').slice(0,-2).css('background', '#ccc');
+		//$('li').slice(2, -2).css('background', '#ccc');
+		//alert($('#box').find('li').end().get(0));
+		//alert($('#box').find('li').parent().get(0));
+		//$('#box').next('ul').end().css('background', '#ccc');
+		//alert($('div:first').children().size());
+		//alert($('div:first').contents().size());
+		/* $('li').filter('.red, :first-child, :last-child').css('background',
+				'#ccc'); */
+		$('li').filter(
+				function() {
+					return $(this).attr('class') == 'red'
+							&& $(this).attr('title') == '列表3';
+				}).css('background', '#ccc');
+	});
+</script>
+</head>
+<body>
+	<div>
+		我们的新域名为： <strong>123</strong> ycku.com
+	</div>
+	<div>我们的旧域名为：yc60.com</div>
+	<div></div>
+	<div></div>
+	<ul id="box">
+		<li>列表1</li>
+		<li>列表2</li>
+		<li class="red" title="列表3">列表3</li>
+		<li class="red">列表4</li>
+		<li>列表5</li>
+		<li>列表6</li>
+		<li>列表7</li>
+		<li>列表8</li>
+		<li>列表9</li>
+	</ul>
+	<ul>
+		<li>列表1</li>
+		<li>列表2</li>
+		<li>列表3</li>
+		<li class="red" title="列表3">列表4</li>
+		<li>列表5</li>
+		<li>列表6</li>
+		<li>列表7</li>
+		<li>列表8</li>
+		<li>列表9</li>
+	</ul>
+	<input type="text" />
+	<h3>我是标题</h3>
+</body>
+</html>

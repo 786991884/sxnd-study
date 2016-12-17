@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>键盘事件和失去焦点</title>
+</head>
+<body>
+	<input onkeypress="show(event)" onblur="checkLen(this)">
+	<div id="myDiv" style="display: inline-block;"></div>
+	<br>
+	<input type="text" />
+	<script type="text/javascript">
+		function show(event) {
+			//得到键盘的Unicode编码
+			console.log(event.charCode);
+		}
+		function checkLen(target) {
+			if (target.value.length < 5) {
+				document.getElementById("myDiv").innerHTML = "长度小于5";
+				document.getElementById("myDiv").style.display = "inline-block";
+				target.focus();//获取焦点
+			} else {
+				document.getElementById("myDiv").style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>

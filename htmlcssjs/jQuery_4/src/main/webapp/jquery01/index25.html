@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajax</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(function() {
+		/* $('input').click(function() {
+			$('#box').load('test.html .url');
+		}); */
+		/* $('input').click(function(){
+			$('#box').load('test.php');
+		}); */
+		/* $('input').click(function() {
+			$('#box').load('test.php?url=ycku');
+		}); */
+		/* $('input').click(function() {
+			$('#box').load('test.php', {
+				url : 'ycku'
+			});
+		}); */
+		$('input').click(function() {
+			$('#box').load('test.php', {
+				url : 'ycku'
+			}, function(response, status, xhr) {
+				//alert(response);
+				//$('#box').html(response+'123');
+				if (status == 'success') {
+					alert('成功后的处理');
+				}
+				//alert(xhr.responseText);
+				//alert(xhr.responseXML);
+				//alert(xhr.status);
+				alert(xhr.statusText);
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="button" value="异步加载数据">
+	<div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>通过构造函数创建对象</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Person(name, age) {
+			this.name = name;
+			this.age = age;
+			//功能不能共享，各个对象有各自的
+			//this.sayHi=function(){alert(this.name);};
+
+		}
+		//原型
+		Person.prototype.sayHi = function() {
+			alert(this.name);
+		};
+		Person.prototype.toString = function() {
+			return "sbsb";
+		}
+		var obj1 = new Person("z3", 23);
+		var obj2 = new Person("l4", 24);
+		console.log(obj1);
+		console.log(obj2);
+		obj1.sayHi();
+		obj2.sayHi();
+		//
+		// console.log(obj1.sayHi==obj2.sayHi);//false
+		console.log(obj1.__proto__.sayHi == obj2.__proto__.sayHi);//true
+		console.log("ppp:" + (obj1.__proto__ === Person.prototype));
+		console.log(obj1.toString());
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sxnd-study</artifactId>
+        <groupId>com.xubh.sxnd</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>htmlcssjs</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ajax_jquery_demo</module>
+        <module>html_1</module>
+        <module>html_2</module>
+        <module>js_1</module>
+        <module>html_3</module>
+        <module>bsuserman</module>
+        <module>html5test</module>
+        <module>js_2</module>
+        <module>jQuery_1</module>
+        <module>jQuery_2</module>
+        <module>jQuery_3</module>
+        <module>js_3</module>
+        <module>ppt-demo</module>
+        <module>jQuery_4</module>
+        <module>ajax_jquery_demo_2</module>
+        <module>ajax_jquery_demo_3</module>
+    </modules>
+
+</project>

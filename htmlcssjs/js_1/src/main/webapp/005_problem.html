@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>容易出的问题</title>
+<!-- 如果你指定了src,就不能在里面写，写了也没有用 -->
+<script type="text/javascript" src="js/my.js">
+	//function sayHi2(msg){window.alert(msg);}
+</script>
+<script type="text/javascript">
+	//再书写一个script解决问题
+	function sayHi2(msg) {
+		window.alert(msg);
+	}
+</script>
+</head>
+<body>
+	<button onclick="sayHi('sb')">sb</button>
+	<button onclick="sayHi2('f2b')">sb2</button>
+</body>
+</html>

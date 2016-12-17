@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<!-- <field name="user"> <field-validator type="visitor"> <param name="context">abc</param> 
+		<message>dd</message> </field-validator> </field> -->
+	<field name="username">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>用户名不能为空！</message>
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>密码不能为空！</message>
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<param name="trim">true</param>
+			<message>密码不能少于${minLength}位！！！</message>
+		</field-validator>
+	</field>
+</validators>

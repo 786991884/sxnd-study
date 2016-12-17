@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- action就告诉提交到那个服务器上那个程序 处理
+     1、如果想要你的输入内容提交到服务器，必须提供name属性
+     2、对于checkbox和radio如果木有选中就不向服务器提交
+     3、如果checkbox和radio木有指定value，提交的值on,无法区分选中了什么，因而必须提供值
+     4、select中option的内容是用户看到的，提交到服务器的是value的值；当你木有指定value值时候就是你看到的值
+-->
+<form action="http://www.baidu.com" >
+<fieldset>
+<legend>基本信息：</legend>
+ 姓名:<input type="text" name="uname" value="z3" size="14" maxlength="4" readonly="readonly"><br>
+密码：<input type="password" name="pwd" size="6"><br>
+头像:<input type="file" name="photo"><br>
+爱好:<input type="checkbox" name="hobby" value="ps" checked="checked">爬山<input type="checkbox" name="hobby" value="zn">抓鸟<br>
+性别:<input type="radio" name="gender" value="male" checked="checked">男<input type="radio" name="gender" value="female">女<br>
+省份:<select name="provice" multiple="multiple"><!-- ctrl(shift) -->
+<option value="-1">--请选择--</option>
+<option value="ha" selected="selected">河南省</option>
+<option value="hb">河北省</option>
+</select><br>
+</fieldset>
+<fieldset>
+<legend>额外信息</legend>
+简介:<textarea rows="3" cols="10" name="content"></textarea><br>
+<input type="submit" value="提交">
+<!-- 重置到初始值 ,和清空不是一个概念-->
+<input type="reset" value="清空">
+</fieldset>
+</form>
+</body>
+</html>

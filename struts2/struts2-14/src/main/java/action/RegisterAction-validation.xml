@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="bean.name">
+		<!-- 指定bean.name必填 -->
+		<field-validator type="requiredstring">
+			<!-- 如果验证失败，则获取reg_name_null对应的国际化信息 -->
+			<message key="reg_name_null" />
+		</field-validator>
+	</field>
+	<field name="bean.birthday">
+		<!-- 指定bean.birthday范围 -->
+		<field-validator type="date">
+			<param name="min">1990-01-01</param>
+			<param name="max">2010-01-01</param>
+			<message key="reg_birthday_rang" />
+		</field-validator>
+	</field>
+	<field name="bean.phone">
+		<!-- 使用正则表达式指定bean.phone格式 -->
+		<field-validator type="regex">
+			<!-- 指定正则表达式，第一个数字为1，剩余10位为其他任意数字 -->
+			<param name="expression">
+		        <![CDATA[^1\d{10}$]]>
+			</param>
+			<message>
+				${getText("reg_phone_format")}
+			</message>
+		</field-validator>
+	</field>
+	<field name="bean.email">
+		<!-- 指定bean.email必填 -->
+		<field-validator type="requiredstring">
+			<message key="reg_email_null" />
+		</field-validator>
+		<!-- 指定email验证 -->
+		<field-validator type="email">
+			<message key="reg_email_format" />
+		</field-validator>
+	</field>
+	<field name="bean.hopeJob">
+		<!-- 指定字符串的长度 -->
+		<field-validator type="stringlength">
+			<param name="minLength">3</param>
+			<param name="maxLength">10</param>
+			<message key="reg_hopeJob_rang" />
+		</field-validator>
+	</field>
+</validators>
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-6-3 19:57:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.xbh.minioa.domain.Forum" table="FORUM">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="DESCRIPTION" />
+		</property>
+		<property name="position" type="int">
+			<column name="POSITION" />
+		</property>
+		<property name="topicCount" type="int">
+			<column name="TOPICCOUNT" />
+		</property>
+		<property name="articleCount" type="int">
+			<column name="ARTICLECOUNT" />
+		</property>
+		<!-- topics属性，本类与Topic的一对多 -->
+		<set name="topics" table="TOPIC" inverse="false" lazy="true">
+			<key>
+				<column name="forumId" />
+			</key>
+			<one-to-many class="com.xbh.minioa.domain.Topic" />
+		</set>
+		<!-- lastTopic属性，本类与Topic的一对一 -->
+		<many-to-one name="lastTopic" class="com.xbh.minioa.domain.Topic" unique="true">
+			<column name="lastTopicId"></column>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

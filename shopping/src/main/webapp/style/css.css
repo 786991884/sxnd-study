@@ -1,0 +1,31 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+body {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #2F2F2F;
+	background-color: #FFFBF2;
+	background-image: url(../images/1101.gif);
+	background-repeat: repeat-x;
+}
+
+.font01 {
+	color: #D45170;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+

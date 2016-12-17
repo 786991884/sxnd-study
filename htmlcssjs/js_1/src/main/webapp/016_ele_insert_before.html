@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>前置插入</title>
+</head>
+<body>
+	<div id="mydiv">xxx</div>
+	<script type="text/javascript">
+		var div = document.createElement("div");
+		//添加属性
+		div.setAttribute("id", "myDIv2");
+
+		var text = document.createTextNode("Hello World!");
+		div.appendChild(text);
+		var mydiv = document.getElementById("mydiv");
+		mydiv.parentNode.insertBefore(div, mydiv);
+		mydiv.parentNode.insertBefore(mydiv, div);
+	</script>
+</body>
+</html>

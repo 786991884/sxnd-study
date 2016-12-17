@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajax</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(function() {
+		/* $('input').click(function() {
+			$.ajax({
+				type : 'post',
+				url : 'test.php',
+				data : {
+					url : 'ycku'
+				},
+				success : function(response, status, xhr) {
+					$('#box').html(response);
+				}
+			});
+		});
+		$('form input[type=button]').click(function() {
+			$.ajax({
+				type : 'post',
+				url : 'user.php',
+				data : {
+					user : $('form input[name=user]').val(),
+					email : $('form input[name=email]').val()
+				},
+				success : function(response, status, xhr) {
+					$('#box').html(response);
+				}
+			});
+		}); */
+		//表单元素特别多的情况下，写起来非常麻烦，容易出错
+		//复制提交的JS内容时，data属性需要修改的非常多
+		/* $('form input[type=button]').click(function() {
+			$.ajax({
+				type : 'post',
+				url : 'user.php',
+				data : $('form').serialize(),
+				success : function(response, status, xhr) {
+					$('#box').html(response);
+				}
+			});
+		}); */
+		//alert($('form').serialize());//字符串形式的键值对，并且还对url进行的编码
+		/* $('form input[name=sex]').click(function() {
+			$('#box').html(decodeURIComponent($(this).serialize()));
+		}); */
+		/* $('form input[name=sex]').click(function() {
+			$('#box').html($(this).serializeArray());
+			console.log($(this).serializeArray());
+			var json = $(this).serializeArray();
+			$('#box').html(json[0].name + '=' + json[0].value);
+		}); */
+		//初始化重复的属性
+		/* $.ajaxSetup({
+			type : 'post',
+			url : 'user.php',
+			data : $('form').serialize()
+		});
+		$('form input[type=button]').click(function() {
+			$.ajax({
+				success : function(response, status, xhr) {
+					$('#box').html(response);
+				}
+			});
+		}); */
+		$('from input[type=button]').click(function() {
+			$.ajax({
+				type : 'post',
+				url : 'user.php',
+				data : $.param({
+					user : $('form input[name=user]').val(),
+					email : $('form input[name=email]').val()
+				}),
+				success : function() {
+					$('#box').html(response);
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<form>
+		用户名：<input type="text" name="user"><br> 邮件：<input
+			type="text" name="email"><br> <input type="radio"
+			name="sex" value="男">男 <input type="radio" name="sex"
+			value="女">女 <input type="button" value="提交">
+	</form>
+	<div id="box"></div>
+</body>
+</html>

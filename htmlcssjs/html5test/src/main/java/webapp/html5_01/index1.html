@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Audio</title>
+</head>
+<body>
+	<audio id="audio_with_controls" controls autobuffer>
+		<source
+			src="http://playground.html5rocks.com/samples/html5_misc/rushus-modal_blues.mp3"
+			type="audio/mpeg" />
+		<source
+			src="http://playground.html5rocks.com/samples/html5_misc/rushus-modal_blues.ogg"
+			type="audio/ogg" />
+		Audio tag not supported
+	</audio>
+	<!-- some actions from Javascript -->
+	<button id="play">播放</button>
+	<button id="pause">暂停</button>
+	<button id="duration">显示视频长短</button>
+	<div id="duration-log"></div>
+	<script>
+		var song = document.getElementById('audio_with_controls');
+		document.getElementById('play').addEventListener('click', function() {
+			song.play();
+		}, false);
+		document.getElementById('pause').addEventListener('click', function() {
+			song.pause();
+		}, false);
+		document
+				.getElementById('duration')
+				.addEventListener(
+						'click',
+						function() {
+							document.querySelector('#duration-log').textContent = song.duration;
+						}, false);
+	</script>
+</body>
+</html>

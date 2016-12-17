@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<button onclick="alert('sb')">点击我</button>
+<!-- 要达到用户不能点击里面的内容且zz不能随着滚动条滚动：fixed,我们要保证这一层在最顶层--z-index要最大 -->
+<div style="position: fixed;width: 100%;height: 100%;background-color: transparent;top: 0px;z-index: 10000000000">
+<br>
+<br>
+<button onclick="alert('sb2')">点击我2</button>
+</div>
+</body>
+</html>

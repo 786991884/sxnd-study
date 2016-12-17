@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>工具函数</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css"></style>
+<script type="text/javascript">
+	$(function() {
+		/* var str = '                 jQuery               ';
+		//alert($.trim(str));
+		var arr = [ '张三', '李四', '王五', '马六' ];
+		$.each(arr, function(index, value) {
+			$('.box').html(
+					$('#box').html() + (index + 1) + '.' + value + '<br />');
+		}); */
+		/* 	$.each($.ajax(), function(name, fn) {
+				$('#box').html($('#box').html() + name + '</br>');
+			}); */
+		/* var arr = [ 4, 2, 6, 9, 11, 25, 38, 59 ];
+		var arrGrep = $.grep(arr, function(element, index) {
+			return index < 5 && element < 6;//这里按道理是布尔值，但整体返回一个数组
+		});
+		alert(arrGrep);
+		var arr = [ 4, 2, 6, 9, 11, 25, 38, 59 ];
+		var arrMap = $.map(arr, function(element, index) {
+			//return index < 5 && element < 6;	//这里就是按布尔值返回的
+			if (index < 5 && element < 6) {
+				return element + 1;
+			}
+		});
+		alert(arrMap); */
+
+		/* var arr = [ 4, 2, 6, 9, 11, 25, 38, 59 ];
+		alert($.isArray(11, arr));
+		var arr2 = [ 200, 300 ];
+		alert($.merge(arr, arr2));
+		var arr = [ 5, 2, 9, 4, 11, 57, 89, 1, 23, 8 ];
+		var arr2 = [ 2, 9, 4 ];
+		var arr3 = $.merge(arr, arr2);
+		alert($.unique(arr3)); */
+		var divs = $('div').get();
+		divs = divs.concat($('.box').get(0));
+		alert($(divs).size());
+		$.unique(divs);
+		alert($(divs).size());
+		alert($('li').toArray().length);
+		alert($($('li').toArray()).size());
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div></div>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+</body>
+</html>

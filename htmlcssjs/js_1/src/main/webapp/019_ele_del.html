@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>元素删除提示</title>
+</head>
+<body>
+	<input id="ip" value="23" name="uid" type="button" onclick="delDiv()">
+	<div id="mydiv">dddddddddddddddddddd</div>
+	<script type="text/javascript">
+   function delDiv(){
+	  if(window.confirm("你的真要删除吗?")){
+		    var div=document.getElementById("mydiv");
+		    div.parentNode.removeChild(div);
+		  }
+}
+</script>
+</body>
+</html>

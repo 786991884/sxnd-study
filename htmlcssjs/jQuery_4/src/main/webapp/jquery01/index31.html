@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>工具函数</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css"></style>
+<script type="text/javascript">
+	$(function() {
+		/* var arr = [ 1, 2, 3 ];
+		alert($.isArray(arr));
+
+		var fn = function() {
+		};
+		alert($.isFunction(fn));
+
+		var obj = {};
+		alert($.isEmptyObject(obj)); */
+		/* var obj = {};
+		obj = new Object();
+		alert(obj);
+		obj = window;
+		obj = new Object('name');
+		alert(obj);
+		alert($.isPlainObject(obj));
+		alert($.contains($('#box').get(0), $('#pox').get(0))); */
+		//var obj = {};
+		//alert($.type(obj));
+		/* var num = 1.23;
+		alert($.isNumeric(num));
+		var win = window;
+		alert($.isWindow(window)); */
+		var obj = {
+			name : 'lee',
+			age : 100
+		};
+		alert($.param(obj));
+		//alert($.browser.msie + ':' + $.browser.version);
+		//alert($.browser.mozilla);
+		/* if ($.support.opacity == true) {
+			$('#box').css('opacity', 0.5);
+		} else {
+			$('#box').css('filter', 'alpha(opacity=50)');
+		} */
+		var var obj = {
+				name : 'Lee',
+				test : function () {
+					//var _this = obj;
+					//alert(_this.name);
+					alert(this.name);
+				}
+			};
+			
+			obj.test();
+			$('#box').click($.proxy(obj, 'test'));
+
+	});
+</script>
+</head>
+<body>
+	<div id="box">
+		<span id="pax"></span>
+	</div>
+</body>
+</html>

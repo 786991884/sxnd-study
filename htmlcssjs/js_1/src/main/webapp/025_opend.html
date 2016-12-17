@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>被打开窗口</title>
+</head>
+<body>
+	<span>我是通过js打开的页面</span>
+	<button onclick="window.close()">关闭</button>
+	<input type="text" id="myInput" />
+	<button onclick="huiTian()">回填</button>
+	<script type="text/javascript">
+		function huiTian() {
+			//window.opener：谁个打开了当前窗口对应window对象
+			window.opener.document.getElementById("myDiv").innerHTML = window.document
+					.getElementById("myInput").value;
+			window.close();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+           "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 数据库信息（连接信息写到spring的配置文件中） -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<!-- 导入映射配置 -->
+		<mapping resource="com/xbh/minioa/domain/User.hbm.xml" />
+		<mapping resource="com/xbh/minioa/domain/Department.hbm.xml" />
+		<mapping resource="com/xbh/minioa/domain/Role.hbm.xml" />
+		<mapping resource="com/xbh/minioa/domain/Privilege.hbm.xml" />
+		<mapping resource="com/xbh/minioa/domain/Forum.hbm.xml" />
+		<mapping resource="com/xbh/minioa/domain/Reply.hbm.xml" />
+		<mapping resource="com/xbh/minioa/domain/Topic.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

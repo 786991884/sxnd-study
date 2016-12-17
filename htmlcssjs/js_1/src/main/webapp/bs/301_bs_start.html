@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>切换bootstrap主题案例</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 导入控制如何的显示 -->
+<link id="themeLink" rel="stylesheet" media="all" />
+<script src="js/cookies.js"></script>
+
+<!-- 导入控制行为的js -->
+<!-- 
+  问题：
+  1）每次都让用户设置易用性不好--记住用户的偏好(cookie)
+  2）每个人的喜好的主题不一样--因为在客户端记住，每个人各自有客户端
+ -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+	function changeTheme(target) {
+		//换的link元素的href属性
+		var linkTag = document.getElementById("themeLink");
+		var op = target.options[target.selectedIndex];
+		var theme = op.value;
+		linkTag.href = "css/" + theme + "/bootstrap.css";
+		//保存用户的设置
+		Cookies.set("theme", theme, {
+			expires : Infinity
+		});
+	}
+	//时间点(当页面加载完毕)
+	window.onload=function(){
+		
+		var linkTag = document.getElementById("themeLink");
+		if (Cookies.get("theme")) {//若已经设置了，就用用户设置的主题
+			linkTag.href = "css/" + Cookies.get("theme") + "/bootstrap.css";
+			//修改选中项目
+			var sel = document.getElementById("selTheme");
+			for (var i = 0; i < sel.options.length; i++) {
+				if (sel.options[i].value == Cookies.get("theme")) {
+					sel.options[i].selected = "selected";
+					break;
+				}
+			}
+		} else {//木有设置主题，就读取不到，就要指定一种默认的主题
+			linkTag.href = "css/cerulean/bootstrap.css";
+			//修改选中项目
+			var sel = document.getElementById("selTheme");
+			//sel.options[0].selected = "selected";
+		}
+	}
+</script>
+  
+</head>
+<body>
+	<!-- 写一个容器 -->
+	<div class="container-fluid ">
+		<div class="row well">
+			<div class="col-sm-12">
+				选择主题:<select onchange="changeTheme(this)" id="selTheme">
+
+					<option value="cerulean">cerulean</option>
+					<option value="cosmo">cosmo</option>
+					<option value="custom">custom</option>
+					<option value="cyborg">cyborg</option>
+					<option value="darkly">darkly</option>
+					<option value="flatly">flatly</option>
+					<option value="lumen">lumen</option>
+					<option value="slate">slate</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+
+						<label for="inputEmail3" class="col-sm-2 control-label"> 邮件 </label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="inputEmail3" />
+						</div>
+					</div>
+					<div class="form-group">
+
+						<label for="inputPassword3" class="col-sm-2 control-label"> 密码 </label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" id="inputPassword3" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="checkbox">
+
+								<label> <input type="checkbox" /> 记住我
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+
+							<button type="submit" class="btn btn-default">登陆</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+	
+</body>
+</html>

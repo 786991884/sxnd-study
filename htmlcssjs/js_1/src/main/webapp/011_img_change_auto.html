@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>周期性切换图片</title>
+</head>
+<body>
+	<img alt="" src="img/1.jpg" id="myImg" style="width: 200px;">
+	<button onclick="changeImg()">切换图片</button>
+	<button onclick="startChange()">自动图片</button>
+	<button onclick="stopChange()">停止自动图片</button>
+	<script type="text/javascript">
+		var index = 1;
+		var timerId;
+		function changeImg() {
+			index++;
+			if (index == 5) {
+				index = 1;
+			}
+			document.getElementById("myImg").src = "img/" + index + ".jpg";
+		}
+		function startChange() {
+			//自动切换
+			timerId = window.setInterval(changeImg, 1000);
+		}
+		function stopChange() {
+			window.clearInterval(timerId);
+		}
+	</script>
+</body>
+</html>

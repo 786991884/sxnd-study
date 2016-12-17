@@ -1,0 +1,27 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<tlib-version>1.0</tlib-version>
+	<short-name>SimpleTagLibrary</short-name>
+	<uri>/SimpleTagLibrary</uri>
+	<tag>
+		<name>hello</name>
+		<tag-class>ch11.MyOwnSimpleTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+	<tag>
+		<name>helloworld</name>
+		<tag-class>ch11.HelloWorldSimpleTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+	<tag>
+		<name>greet</name>
+		<tag-class>ch11.GreetingTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>user</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

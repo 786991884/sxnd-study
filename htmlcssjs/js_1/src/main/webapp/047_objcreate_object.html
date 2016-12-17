@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>通过Object创建对象</title>
+</head>
+<body>
+<script type="text/javascript">
+  var person=new Object();
+  person.name="z3";
+  person.age=23;
+  person.sayHi=function(){alert(this.name)};
+
+  person.sayHi();
+  console.log(person);
+</script>
+</body>
+</html>

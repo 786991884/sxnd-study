@@ -1,0 +1,12 @@
+p {
+	text-indent: 4em;
+	line-height: 200%;
+	width: 100%
+}
+div{
+	background-color: black;
+	width: 200px;
+}
+.c1, .c2{
+	color: red;
+}

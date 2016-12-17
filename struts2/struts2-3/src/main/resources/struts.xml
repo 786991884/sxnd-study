@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- 配置 Struts 可以受理的请求的扩展名 -->
+	<constant name="struts.action.extension" value="action,do,"></constant>
+	
+	<!-- 打开允许动态方法调用的开关, 默认是 false -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	
+    <package name="default" namespace="/" extends="struts-default">
+
+		<action name="TestActionContext" 
+			class="com.xubh.struts2.action.TestActionContextAction">
+			<result  name="success">/test-actionContext.jsp</result>	
+		</action>
+		
+		<action name="TestAware" 
+			class="com.xubh.struts2.action.TestAwareAction">
+			<result>/test-aware.jsp</result>	
+		</action>
+		
+		<action name="testActionSupport">
+			<result>/testActionSupport.jsp</result>
+		</action>
+
+		<action name="testResult" class="com.xubh.struts2.action.TestResultAction">
+			<result name="success" type="dispatcher">/success.jsp</result>
+			<result name="login" type="redirect">/login.jsp</result>
+			
+			<!-- 重定向到一个 Action -->
+			<!--  
+			<result name="index" type="redirectAction">
+				<param name="actionName">testAction</param>
+				<param name="namespace">/atguigu</param>
+			</result>
+			-->
+			
+			<!-- 通过 redirect 的响应类型也可以便捷的实现 redirectAction 的功能! -->
+			<result name="index" type="redirect">/atguigu/testAction.do</result>
+			
+			<!-- 转发到一个 Action -->
+			<!--  
+			<result name="test" type="chain">
+				<param name="actionName">testAction</param>
+				<param name="namespace">/atguigu</param>
+			</result>
+			-->
+			
+			<!-- 不能通过 type=dispatcher 的方式转发到一个 Action -->
+			<result name="test">/atguigu/testAction.do</result>
+			
+			
+		</action>
+		
+		<action name="testDynamicMethodInvocation"
+			class="com.xubh.struts2.action.TestDynamicMethodInvocationActoin"
+			method="save">
+			<result>/success.jsp</result>	
+		</action>
+
+    </package>
+    
+    <package name="testPackage" namespace="/atguigu" extends="struts-default">
+    	<action name="testAction" 
+    		class="com.xubh.struts2.action.TestAction">
+    		<result>/success.jsp</result>
+    	</action>
+    </package>
+
+
+</struts>

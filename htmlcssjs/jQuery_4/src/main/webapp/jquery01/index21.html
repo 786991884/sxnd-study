@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>高级事件</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.bg {
+	background-color: #ccc;
+}
+
+.size {
+	font-size: 20px;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+		//普通绑定.bind
+		//普通解绑.unbind
+
+		//事件委托.live .delegate
+		//解除委托.die .undelegate
+
+		//新方法绑定.on
+		//新方法解绑.off
+
+		$('.button').on('click', function() {
+			alert('替代bind');
+		});
+		$('.button').on('click', {
+			user : 'Lee'
+		}, function(e) {
+			alert('替代bind' + e.data.user);
+		});
+		$('.button').on('mouseover mouseout', function(e) {
+			alert('移入移出');
+		});
+		$('.button').on({
+			mouseover : function() {
+				alert('移入');
+			},
+			mouserout : function() {
+				alert('移出');
+			}
+		});
+		$('form').on('submit', function() {
+			return false;
+		});
+
+		//$('form').on('submit', false);
+		$('.button').on('click', function() {
+			alert('替代bind');
+		});
+
+		$('.button').off('click');
+
+		//替代.live .delegate
+		$('#box').on('click', '.button', function() {
+			$(this).clone().appendTo('#box');
+		});
+
+		//替代.live .delegate
+		$('#box').on('click', '.button', function() {
+			$(this).clone().appendTo('#box');
+		});
+		//移出事件委托
+		$('#box').off('click', '.button');
+		//仅一次事件触发
+		$('.button').one('click', function() {
+			alert("仅一次事件触发！");
+		});
+		//仅一次事件触发
+		$('#box').one('click', '.button', function() {
+			$(this).clone().appendTo('#box');
+		});
+	});
+</script>
+</head>
+<body>
+	<div style="width: 200px; height: 200px; background: green" id="box">
+		<input type="button" class="button" value="按钮" />
+	</div>
+</body>
+</html>

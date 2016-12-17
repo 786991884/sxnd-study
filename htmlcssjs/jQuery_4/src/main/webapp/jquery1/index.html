@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<title>jQuery基础语法</title>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//alert("document ready");
+	});
+
+	$(function() {
+		//alert("function");
+	});
+
+	$(document).ready(function() {
+		//隐藏当前元素
+		$("a").click(function() {
+			$(this).hide();
+		});
+		//$("#jQuery110").hide();//隐藏id=jQuery110的元素
+		//$("p.nice").hide();//隐藏class=nice的所有段落
+		//$("p").hide();//隐藏所有段落
+		$("#jQuery110").css("backgroundColor", "green");
+		$("p").css({
+			"backgroundColor" : "silver",
+			"color" : "red"
+		});
+	});
+</script>
+</head>
+<body>
+	<a>点我，我就消失</a>
+	<p id="jQuery110">我的ID是jQuery110</p>
+	<p id="jQuery119">我的ID是jQuery119</p>
+	<p class="nice">我的class是nice</p>
+	<p class="nice">我的class是nice</p>
+	<p>段落</p>
+	<p>段落</p>
+</body>
+</html>

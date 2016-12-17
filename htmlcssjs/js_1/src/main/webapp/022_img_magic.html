@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>放大器</title>
+<style type="text/css">
+.mask {
+	border: 1px solid #e5e5e5;
+	background-color: rgba(255, 0, 255, 0.2);
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.preview {
+	width: 350px;
+	height: 350px;
+	position: relative;
+}
+
+.preview .previewdiv {
+	position: absolute;
+	left: 350px;
+	top: 0px;
+	width: 400px;
+	height: 400px;
+	border: 1px solid #e5e5e5;
+	overflow: hidden;
+}
+</style>
+</head>
+<body>
+	<div class="preview" onmousemove="move(event)">
+		<img alt="" src="img/55d29ed0Nb6301c81_small.jpg">
+		<div class="mask" id="mask"></div>
+		<div class="previewdiv">
+			<img alt="" src="img/55d29ed0Nb6301c81_big.jpg">
+		</div>
+	</div>
+	<script type="text/javascript">
+		function move(event) {
+			document.getElementById("mask").style.left = event.clientX + "px";
+			document.getElementById("mask").style.top = event.clientY + "px";
+		}
+	</script>
+</body>
+</html>

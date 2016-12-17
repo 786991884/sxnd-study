@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文本转json对象</title>
+<script type="text/javascript">
+var friends = '[{"name":"马云", "img":"monkey.jpg", "desc":"我大愚若智，其实很笨"},{"name":"马化腾", "img":"qq.jpg", "desc":"成功=百分之99的抄袭+百分之1的改造"}]';
+var j = eval(friends);
+alert(j[0].name);
+
+var j1 = eval("(" + friends + ")");
+alert(j1[1].desc);
+</script>
+</head>
+<body>
+
+</body>
+</html>

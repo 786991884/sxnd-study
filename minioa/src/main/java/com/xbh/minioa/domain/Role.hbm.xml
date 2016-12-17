@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-6-3 19:57:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.xbh.minioa.domain.Role" table="ROLE">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="DESCRIPTION" />
+		</property>
+		<!-- users属性，本类与User的多对多 -->
+		<set name="users" table="user_role" inverse="false" lazy="true">
+			<key>
+				<column name="roleId" />
+			</key>
+			<many-to-many class="com.xbh.minioa.domain.User" column="userId" />
+		</set>
+		<!-- privileges属性，本类与Privilege的多对多 -->
+		<set name="privileges" table="role_privilege" inverse="false" lazy="false">
+			<key>
+				<column name="roleId" />
+			</key>
+			<many-to-many class="com.xbh.minioa.domain.Privilege" column="privilegeId" />
+		</set>
+	</class>
+</hibernate-mapping>

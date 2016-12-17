@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>移动图片</title>
+<style type="text/css">
+ #myImg{
+  position: absolute;
+ }
+ #myDiv{
+   padding: 10px;
+   border: 1px solid red;
+   position: relative;
+   width: 100px;
+   height: 100px;
+ }
+</style>
+</head>
+<body>
+<div id="myDiv">
+<img alt="" src="img/1.jpg" width="100px" id="myImg">
+</div>
+<script type="text/javascript">
+ window.document.getElementById("myDiv").addEventListener("mousemove", function(event){
+        document.getElementById("myImg").style.left=event.clientX+5+"px";
+        document.getElementById("myImg").style.top=event.clientY+5+"px";
+	 });
+</script>
+</body>
+</html>

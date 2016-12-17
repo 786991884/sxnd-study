@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- action告诉表单提交内容由那个Action来处理 -->
+<form action="" method="post">
+用户ID：<input name="uid" value="1" readonly="readonly" type="text"><br>
+ 姓名：<input name="uname"><br>
+密码:<input type="password" name="pwd"><br>
+上传头像:<input type="file" name="photo"><br>
+<!-- checkbox类型如果木有指定选中的值，那么就是on -->
+爱好：<input type="checkbox" name="hobby" value="ps" checked="checked"> 爬山<input type="checkbox" name="hoddy" value="zn">抓鸟<br>
+性别:<input type="radio" name="gender"  value="male" checked="checked">男<input type="radio" name="gender" value="female">女<br>
+省份:<select name="provice">
+    <option value="-1">--请选择--</option>
+    <option value="ha">河南省</option>
+    <option value="ah">安徽省</option>
+</select>
+<br>
+个人介绍：<textarea rows="10" cols="20" name="content"></textarea><br>
+<input type="submit" value="注册"><input type="reset" value="重置">
+<input type="button" value="btn" onclick="alert('sb')"><br>
+<input type="image" src="images/s3.png" onclick="">
+</form>
+</body>
+</html>

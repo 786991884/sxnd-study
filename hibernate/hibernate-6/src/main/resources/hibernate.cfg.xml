@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="">
+		<!-- 开启二级缓存 -->
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<!-- 指定缓存产品提供商 -->
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		<!-- 数据库驱动 -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- 数据库连接的URL -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db_database11</property>
+		<!-- 数据库连接用户名 -->
+		<property name="hibernate.connection.username">root</property>
+		<!-- 数据库连接密码 -->
+		<property name="hibernate.connection.password">1234</property>
+		<!-- Hibernate方言 -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 打印SQL语句 -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<!-- 映射文件 -->
+		<mapping resource="com/bean/Product.hbm.xml" />
+		<mapping resource="com/bean/Factory.hbm.xml" />
+		<mapping resource="com/bean/People.hbm.xml" />
+		<mapping resource="com/bean/IDcard.hbm.xml" />
+		<mapping resource="com/bean/Role.hbm.xml" />
+		<mapping resource="com/bean/User.hbm.xml" />
+		<mapping resource="com/bean/Person.hbm.xml" />
+		<mapping resource="com/bean/Employee.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

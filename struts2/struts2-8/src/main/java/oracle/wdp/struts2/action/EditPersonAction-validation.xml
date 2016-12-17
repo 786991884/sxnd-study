@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//OpenSymphony Group//XWork Validator 1.0.3//EN"
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd">
+<validators>
+	<!-- type指定用什么类型的验证器 -->
+	<validator type="requiredstring">
+		<!-- filedName指定对谁个验证，也即html表单的控件名 -->
+		<param name="fieldName">personBean.firstName</param>
+		<!-- 该类型验证器的特殊参数 -->
+		<param name="trim">true</param>
+		<!-- 验证失败时的错误信息 国际化：指定key就可以了 -->
+		<message>name must be required</message>
+	</validator>
+	<validator type="requiredstring">
+		<param name="fieldName">personBean.email</param>
+		<message>Email address not valid</message>
+	</validator>
+	<validator type="email">
+		<param name="fieldName">personBean.email</param>
+		<message>Email address not valid.</message>
+	</validator>
+	<validator type="requiredstring">
+		<param name="fieldName">personBean.phoneNumber</param>
+		<message>Phone number is required.</message>
+	</validator>
+	<validator type="regex">
+		<param name="fieldName">personBean.phoneNumber</param>
+		<param name="regex"><![CDATA[\d{3}-\d{3}-\d{4}]]></param>
+		<message>Phone number must be entered as 999-999-9999.</message>
+	</validator>
+	<validator type="fieldexpression">
+		<param name="fieldName">personBean.carModels</param>
+		<param name="expression"><![CDATA[personBean.carModels.length>0]]></param>
+		<message>You must select at least one car model.</message>
+	</validator>
+</validators>

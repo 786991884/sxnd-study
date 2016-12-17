@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>动画效果</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+#box {
+	width: 100px;
+	height: 100px;
+	background: red;
+	position: absolute;
+}
+
+#pox {
+	width: 100px;
+	height: 100px;
+	background: green;
+	position: absolute;
+	top: 150px;
+}
+
+.test {
+	padding: 5px;
+	margin-right: 5px;
+	background: orange;
+	float: left;
+	display: none;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+		/* $('.button').click(function() {
+			$('#box').animate({
+				left : '800px'
+			}, 3000)
+		});
+		$('.stop').click(function() {
+			$('#box').stop();
+		}); */
+		/* $('.button').click(function() {
+			$('#box').animate({
+				left : '300px'
+			}, 1000).animate({
+				bottom : '300px'
+			}, 1000).animate({
+				width : '300px'
+			}, 1000).animate({
+				height : '300px'
+			}, 1000);
+		});
+		$('.stop').click(function() {
+			$('#box').stop(true, true);
+		}); */
+		//如果有列队动画，停止的话，那么会停止掉第一个列队动画，然后继续执行后面的列队动画
+		//第一个参数，如果为true，就是停止并且清除后面的列队动画，动画即完全停止，默认值为false
+		//第二个参数，如果为true，停止后会跳转到末尾的位置上。，默认值为 false
+		/* $('.button').click(function() {
+			$('#box').delay(1000).animate({
+				left : '300px'
+			}).animate({
+				bottom : '300px'
+			}).delay(2000).animate({
+				width : '300px'
+			}).animate({
+				height : '300px'
+			})
+		}); */
+		/* $('#box').slideToggle('slow', function() {
+			$(this).slideToggle('slow', arguments.callee);
+		});
+
+		$('.ani').click(function() {
+			$(':animated').stop().css('background', 'blue');
+		}); */
+		/* $.fx.interval = 200;
+		//$.fx.off=true;关闭动画
+		$('.button').click(function() {
+			$('#box').toggle(1000);
+		}); */
+		$('.button').click(function() {
+			$('#box').animate({
+				left : '800px'
+			}, 3000, 'swing', function() {
+				left: '800px'
+			}, 3000, 'linear');
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="button" class="button" value="按钮">
+	<input type="button" class="stop" value="停止">
+	<input type="button" class="ani" value="查找运动的动画">
+	<div id="box">box</div>
+	<div id="pox">pox</div>
+</body>
+</html>

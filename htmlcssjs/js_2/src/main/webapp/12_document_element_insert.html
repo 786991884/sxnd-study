@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input  id="ip" value="23" name="uid" type="button" onclick="addDiv()">
+<div id="mydiv">dddddddddddddddddddd</div>
+<script type="text/javascript">
+  function addDiv(){
+   //  var divElem=window.document.createElement("div");
+     var divElem=document.getElementById("mydiv").cloneNode(true);
+     var textElem=window.document.createTextNode("Hello world!");
+     divElem.appendChild(textElem);
+     //window.document.body.appendChild(divElem);
+     window.document.body.insertBefore(divElem, document.getElementById("mydiv"));
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+/*
+div {
+	color:red;
+}
+p {
+	color:red;
+}
+strong {
+	color:red;
+}
+#div, .p, strong {
+	color:red;
+}
+.li a {
+	color:red;
+}
+ul a {
+	color:green;
+}
+ul li a {
+	color:red;
+}
+
+* {
+	color:red;
+}
+.box.pox {
+	color:red;
+}
+.box, .pox {
+	color:red;
+}
+
+*/
+</style>
+<script type="text/javascript">
+	$(function() {
+		//$('div,p,strong').css('color', 'red');
+		//	$('#box,.pox,strong').css('color', 'blue');
+		//$('ul li a').css('color', 'orange');
+		//$('*').css('color', 'blue');
+		//alert($('*').size());
+		//alert($('*')[0].nodeName);//html
+		//在全局范围使用*号，会极大的消耗资源，所以不建议在全局使用
+		//$('ul li a, ul li em, ul li strong').css('color', 'red');
+		//$('ul li, ul li a').css('color', 'red');
+		//$('ul li *').css('color', 'green');
+		//alert($('ul li *').size());//通配选择器一般运用在局部的环境内
+
+		/* 	$('div.box').css('color','red');
+			 $('.box.pox').css('color', 'green'); */
+		//$('div#box p ul li a#link');//可以，选择器越复杂，那么字符串解析就越慢
+		//$('#link');单个ID不需要字符串解析，就可以获取到
+	});
+</script>
+</head>
+<body>
+	<div class="box pox">div</div>
+	<p class="box">p</p>
+	<div class="pox">div</div>
+	<p class="box">p</p>
+</body>
+</html>

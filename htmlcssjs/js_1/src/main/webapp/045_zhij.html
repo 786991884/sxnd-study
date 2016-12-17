@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>直接量方式创建对象</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {
+			name : "z3",
+			age : 23,
+			sayHi : function() {
+				alert(this.name);
+			}
+		};
+		console.log(obj);
+		obj.sayHi();
+		var obj2 = {
+			name : "l4",
+			age : 24,
+			sayHi : function() {
+				alert(this.name);
+			}
+		};
+		console.log(obj2);
+	</script>
+</body>
+</html>

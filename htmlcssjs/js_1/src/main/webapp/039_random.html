@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>图片随机移动</title>
+<style type="text/css">
+#myImg {
+	position: absolute;
+}
+</style>
+</head>
+<body>
+	<img alt="" src="img/1.jpg" width="200px" id="myImg">
+	<script type="text/javascript">
+		window.setInterval(run, 1000);
+		function run() {
+			var x = Math.floor(Math.random() * screen.availWidth);
+			var y = Math.floor(Math.random() * screen.availHeight);
+			if (y > screen.availHeight
+					- document.getElementById("myImg").height) {
+				y = screen.availHeight
+						- document.getElementById("myImg").height;
+			}
+			if (x > screen.availWidth - document.getElementById("myImg").width) {
+				x = screen.availWidth - document.getElementById("myImg").width;
+			}
+			console.log("x=" + x + ",y=" + y);
+			document.getElementById("myImg").style.left = x + "px";
+			document.getElementById("myImg").style.top = y + "px";
+		}
+	</script>
+</body>
+</html>

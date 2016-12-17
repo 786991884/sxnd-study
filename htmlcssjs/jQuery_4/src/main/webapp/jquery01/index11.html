@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>基础DOM和CSS操作</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.bg {
+	background-color: #ccc;
+}
+
+.size {
+	font-size: 20px;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+		/* alert(typeof parseInt($('div').css('width')));
+		alert(typeof $('div').width());
+		alert($('div').width());
+		alert($(window).width());
+		alert($(document).width()); */
+		//$('div').width(500);
+		//$('div').width('500px');
+		//$('div').width('500pt');
+		/* $('div').width(function(index, width) {
+			return width - 500 + 'px';//虽然可以不加，会智能添加
+		});
+		alert($('div').height()); */
+		//padding, border, margin
+		//alert($('div').width());					//200        200       200
+		//alert($('div').innerWidth());			//400        400       400
+		//alert($('div').outerWidth());			//400        600       600
+		//alert($('div').outerWidth(true));	    //400        600       800
+		//alert($('div').offset().top);
+		//alert($('strong').offset().top);
+		//alert($('div').position().top);
+		//alert($('strong').offset().top);
+		//alert($('strong').position().top);
+		$(window).scrollTop(300);
+	});
+</script>
+</head>
+<body>
+	<div title="aaa" style="position: relative;">
+		<strong style="position: absolute; top: 1px;">www.ycku.com</strong>
+	</div>
+
+	<div title="bbb">
+		<strong>www.ycku.com</strong>
+	</div>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+
+</body>
+</html>

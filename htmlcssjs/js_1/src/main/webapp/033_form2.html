@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>实现验证提交方式二</title>
+</head>
+<body>
+	<form action="" name="frm">
+		姓名*：<input name="uname"><br> 密码:<input type="password" name="pwd"><br> 年龄:<input name="age"><br>
+		<button type="button" onclick="sub(frm)">提交</button>
+		<div id="myDiv"></div>
+	</form>
+	<script type="text/javascript">
+		function sub(f) {
+			var uname = document.getElementsByName("uname")[0];
+			var pwd = document.getElementsByName("pwd")[0];
+			var myDiv = document.getElementById("myDiv");
+			var valid = true;
+			if (uname.value == "") {
+				myDiv.innerHTML += "名字不能为空<br>";
+				valid = false;
+			}
+			if (pwd.value.length < 5) {
+				myDiv.innerHTML += "密码长度小于5<br>";
+				valid = false;
+			}
+			if (valid) {
+				f.submit();
+			}
+		}
+	</script>
+</body>
+</html>

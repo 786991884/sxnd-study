@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-6-3 19:57:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.xbh.minioa.domain.Topic" table="TOPIC">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="title" type="java.lang.String">
+			<column name="TITLE" />
+		</property>
+		<property name="content" type="java.lang.String">
+			<column name="CONTENT" />
+		</property>
+		<property name="faceIcon" type="java.lang.String">
+			<column name="FACEICON" />
+		</property>
+		<property name="postTime" type="java.util.Date">
+			<column name="POSTTIME" />
+		</property>
+		<property name="ipAddr" type="java.lang.String">
+			<column name="IPADDR" />
+		</property>
+		<!-- author属性，本类与User的多对一 -->
+		<many-to-one name="author" class="com.xbh.minioa.domain.User" fetch="join">
+			<column name="authorId" />
+		</many-to-one>
+		<property name="type" type="int">
+			<column name="TYPE" />
+		</property>
+		<property name="replyCount" type="int">
+			<column name="REPLYCOUNT" />
+		</property>
+		<property name="lastUpdateTime" type="java.util.Date">
+			<column name="LASTUPDATETIME" />
+		</property>
+		<!-- forum属性，本类与Forum的多对一 -->
+		<many-to-one name="forum" class="com.xbh.minioa.domain.Forum">
+			<column name="forumId"></column>
+		</many-to-one>
+		<!-- replies属性，本类与Reply的一对多 -->
+		<set name="replies" table="REPLY" inverse="false" lazy="true">
+			<key>
+				<column name="topicId" />
+			</key>
+			<one-to-many class="com.xbh.minioa.domain.Reply" />
+		</set>
+		<!-- lastReply属性，本类与Reply的一对一 -->
+		<many-to-one name="lastReply" class="com.xbh.minioa.domain.Reply" unique="true">
+			<column name="lastReplyId"></column>
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>

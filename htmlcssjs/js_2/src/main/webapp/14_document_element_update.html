@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input  id="ip" value="23" name="uid" type="button" onclick="replaceDiv()">
+<div id="mydiv">dddddddddddddddddddd</div>
+<script type="text/javascript">
+  function replaceDiv(){
+   //  var divElem=window.document.createElement("div");
+     var divElem=document.getElementById("mydiv");
+     var newElem=document.createElement("span");
+      
+     //window.document.body.appendChild(divElem);
+     window.document.body.replaceChild(newElem, divElem);
+  }
+</script>
+</body>
+</html>

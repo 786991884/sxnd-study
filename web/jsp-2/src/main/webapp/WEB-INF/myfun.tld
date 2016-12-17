@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+ <tlib-version>1.0</tlib-version>
+ <short-name>mf</short-name>
+ <function>
+ <!-- 你在el表达式中使用的名字 -->
+  <name>toUpperCase</name>
+  <!-- 指定哪个类，哪个方法 -->
+  <function-class>sxndjspnew.MyCustomFun</function-class>
+  <function-signature>java.lang.String toUpperCase(java.lang.String)</function-signature>
+ </function>
+</taglib>

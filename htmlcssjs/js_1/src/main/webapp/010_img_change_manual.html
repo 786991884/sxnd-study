@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>单击切换图片</title>
+</head>
+<body>
+<img alt="" src="img/1.jpg" id="myImg">
+<button onclick="changeImg()">切换图片</button>
+<script type="text/javascript">
+ var index=1;
+ function changeImg(){
+    index++;
+    if(index==5){
+        index=1;
+     }
+    document.getElementById("myImg").src="img/"+index+".jpg";
+ }
+</script>
+</body>
+</html>

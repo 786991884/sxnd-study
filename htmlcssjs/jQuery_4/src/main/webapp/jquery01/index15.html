@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>基础事件</title>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<style type="text/css">
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.bg {
+	background-color: #ccc;
+}
+
+.size {
+	font-size: 20px;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+		$('input').bind('click', function() {
+			alert('弹窗！');
+		});
+		$('input').bind('click', fn);
+		function fn() {
+			alert('处理函数！');
+		}
+		$('input').bind('click mouseover', function() {
+			alert('弹窗');
+		});
+		$('input').bind('mouseover mouseout', function() {
+			$('div').html(function(index, value) {
+				return value + '1';
+			});
+		});
+		$('input').bind({
+			mouseover:function(){
+				alert('移入');
+			}
+		mouseout:function(){
+			alert('移出');
+		}
+		});
+		$('input').bind('click mouseover', function () {
+			alert('弹窗！');
+		});
+
+		
+		$('input').bind('click', fn1);
+		$('input').bind('click', fn2);
+		
+		function fn1() {
+			alert('fn1');
+		}
+		
+		function fn2() {
+			alert('fn2');
+		}
+		
+		$('input').unbind();//删除全部事件 
+		$('input').unbind('click');//只删除click事件
+		$('input').unbind('click',fn2);//只删除click事件绑定的fn2
+		
+		$('input').click(function(){
+			alert("单击");
+		});
+		$('input').dblclick(function () {
+			alert('双击');
+		});
+		
+		$('input').mousedown(function () {
+			alert('鼠标左键按下');
+		});
+		
+		$('input').mouseup(function () {
+			alert('鼠标左键按下弹起');
+		});
+		
+		$(window).unload(function(){
+			alert('1');
+		});
+		$(window).resize(function(){
+			alert('文档改变了');
+		});
+		$(window).scroll(function () {			
+			alert('滚动条改变了');									
+		});
+		$('input').select(function () {
+			alert('文本选定');
+		});
+		
+		$('input').change(function () {
+			alert('文本改变');
+		});
+		$('input').submit(function(){
+			alert('表单提交！');
+		});
+	});
+</script>
+</head>
+<body>
+	<form>
+		<input type="submit" value="按钮" />
+	</form>
+</body>
+</html>

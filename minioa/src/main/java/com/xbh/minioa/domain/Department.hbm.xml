@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-6-3 19:57:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.xbh.minioa.domain.Department" table="DEPARTMENT">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="DESCRIPTION" />
+		</property>
+		<!-- users属性，本类与User的一对多 -->
+		<set name="users" table="`USER" inverse="false" lazy="true">
+			<key>
+				<column name="departmentId" />
+			</key>
+			<one-to-many class="com.xbh.minioa.domain.User" />
+		</set>
+		<!-- parent属性，本类与Department（上级）的多对一 -->
+		<many-to-one name="parent" class="com.xbh.minioa.domain.Department" fetch="join">
+			<column name="parentId" />
+		</many-to-one>
+		<!-- children属性，本类与Department（下级）的一对多 -->
+		<set name="children" table="DEPARTMENT" inverse="false" lazy="true" cascade="delete" order-by="id">
+			<key>
+				<column name="parentId" />
+			</key>
+			<one-to-many class="com.xbh.minioa.domain.Department" />
+		</set>
+	</class>
+</hibernate-mapping>
