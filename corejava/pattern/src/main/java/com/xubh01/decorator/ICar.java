@@ -2,7 +2,6 @@ package com.xubh01.decorator;
 
 /**
  * 抽象构建
- * @author Administrator
  *
  */
 public interface ICar {
