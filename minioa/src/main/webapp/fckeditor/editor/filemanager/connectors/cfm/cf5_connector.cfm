@@ -256,10 +256,10 @@
 
 			<cfscript>
 				newFolderName = url.newFolderName;
-				if( reFind("[^A-Za-z0-9_\-\.]", newFolderName) ) {
+				if( reFind("[^com.xubh.test.A-Za-z0-9_\-\.]", newFolderName) ) {
 					// Munge folder name same way as we do the filename
 					// This means folder names are always US-ASCII so we don't have to worry about CF5 and UTF-8
-					newFolderName = reReplace(newFolderName, "[^A-Za-z0-9\-\.]", "_", "all");
+					newFolderName = reReplace(newFolderName, "[^com.xubh.test.A-Za-z0-9\-\.]", "_", "all");
 					newFolderName = reReplace(newFolderName, "_{2,}", "_", "all");
 					newFolderName = reReplace(newFolderName, "([^_]+)_+$", "\1", "all");
 					newFolderName = reReplace(newFolderName, "$_([^_]+)$", "\1", "all");

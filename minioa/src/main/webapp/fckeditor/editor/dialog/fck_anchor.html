@@ -54,7 +54,7 @@ if ( oFakeImage )
 //Search for a real anchor
 if ( !oFakeImage )
 {
-	oAnchor = FCK.Selection.MoveToAncestorNode( 'A' ) ;
+	oAnchor = FCK.Selection.MoveToAncestorNode( 'com.xubh.test.A' ) ;
 	if ( oAnchor )
 		FCK.Selection.SelectNode( oAnchor ) ;
 }
@@ -80,7 +80,7 @@ function Ok()
 	var sNewName = GetE('txtName').value ;
 
 	// Remove any illegal character in a name attribute:
-	// A name should start with a letter, but the validator passes anyway.
+	// com.xubh.test.A name should start with a letter, but the validator passes anyway.
 	sNewName = sNewName.replace( /[^\w-_\.:]/g, '_' ) ;
 
 	if ( sNewName.length == 0 )
@@ -176,7 +176,7 @@ function ReadjustLinksToAnchor( sCurrent, sNew )
 {
 	var oDoc = FCK.EditorDocument ;
 
-	var aLinks = oDoc.getElementsByTagName( 'A' ) ;
+	var aLinks = oDoc.getElementsByTagName( 'com.xubh.test.A' ) ;
 
 	var sReference = '#' + sCurrent ;
 	// The url of the document, so we check absolute and partial references.

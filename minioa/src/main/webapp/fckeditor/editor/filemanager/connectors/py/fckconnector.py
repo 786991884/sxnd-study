@@ -51,7 +51,7 @@ class FCKeditorConnectorBase( object ):
 		return
 
 class FCKeditorRequest(object):
-	"A wrapper around the request object"
+	"com.xubh.test.A wrapper around the request object"
 	def __init__(self, environ):
 		if environ: # WSGI
 			self.request = cgi.FieldStorage(fp=environ['wsgi.input'],

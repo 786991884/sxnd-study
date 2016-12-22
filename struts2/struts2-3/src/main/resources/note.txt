@@ -84,7 +84,7 @@
 
 2). 为什么访问 WEB 资源?
 
-	B\S 的应用的 Controller 中必然需要访问 WEB 资源: 向域对象中读写属性, 读写 Cookie, 获取 realPath ....
+	com.xubh.test.B\S 的应用的 Controller 中必然需要访问 WEB 资源: 向域对象中读写属性, 读写 Cookie, 获取 realPath ....
 
 3). 如何访问 ?
 

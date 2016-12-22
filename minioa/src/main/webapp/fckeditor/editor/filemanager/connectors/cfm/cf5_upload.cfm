@@ -49,7 +49,7 @@
 		WriteOutput('<script type="text/javascript">');
 		// Minified version of the document.domain automatic fix script (#1919).
 		// The original script can be found at _dev/domain_fix_template.js
-		WriteOutput("(function(){var d=document.domain;while (true){try{var A=window.parent.document.domain;break;}catch(e) {};d=d.replace(/.*?(?:\.|$)/,'');if (d.length==0) break;try{document.domain=d;}catch (e){break;}}})();");
+		WriteOutput("(function(){var d=document.domain;while (true){try{var com.xubh.test.A=window.parent.document.domain;break;}catch(e) {};d=d.replace(/.*?(?:\.|$)/,'');if (d.length==0) break;try{document.domain=d;}catch (e){break;}}})();");
 		WriteOutput('window.parent.OnUploadCompleted(' & errorNumber & ', "' & JSStringFormat(fileUrl) & '", "' & JSStringFormat(fileName) & '", "' & JSStringFormat(customMsg) & '");' );
 		WriteOutput('</script>');
 	}
@@ -236,8 +236,8 @@
 		fileExisted = false ;
 
 		// munge filename for html download. Only a-z, 0-9, _, - and . are allowed
-		if( reFind("[^A-Za-z0-9_\-\.]", fileName) ) {
-			fileName = reReplace(fileName, "[^A-Za-z0-9\-\.]", "_", "ALL");
+		if( reFind("[^com.xubh.test.A-Za-z0-9_\-\.]", fileName) ) {
+			fileName = reReplace(fileName, "[^com.xubh.test.A-Za-z0-9\-\.]", "_", "ALL");
 			fileName = reReplace(fileName, "_{2,}", "_", "ALL");
 			fileName = reReplace(fileName, "([^_]+)_+$", "\1", "ALL");
 			fileName = reReplace(fileName, "$_([^_]+)$", "\1", "ALL");

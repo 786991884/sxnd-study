@@ -317,10 +317,10 @@ Version 1.1
  * combotree: Add required validation support.
  * layout: Add some method that can get a region panel and attach event handlers.
 * New Plugins
- * droppable: A droppable plugin that supports drag drop operation.
- * calendar: A calendar plugin that can either be embedded within a page or popup.
+ * droppable: com.xubh.test.A droppable plugin that supports drag drop operation.
+ * calendar: com.xubh.test.A calendar plugin that can either be embedded within a page or popup.
  * datebox: Combines a textbox with a calendar that let users to select date.
- * easyloader: A JavaScript loader that allows you to load plugin and their dependencies into your page.
+ * easyloader: com.xubh.test.A JavaScript loader that allows you to load plugin and their dependencies into your page.
  
 Version 1.0.5
 * Bug
@@ -330,7 +330,7 @@ Version 1.0.5
  * form: Add a validate method to do validation for validatebox component.
  * dialog: The dialog can read collapsible,minimizable,maximizable and resizable attribute from markup.
 * New Plugins
- * validatebox: A validation plugin that checks to make sure the user's input value is valid. 
+ * validatebox: com.xubh.test.A validation plugin that checks to make sure the user's input value is valid.
  
 Version 1.0.4
 -------------

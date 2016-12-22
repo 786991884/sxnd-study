@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>A simple JSP</title>
+<title>com.xubh.test.A simple JSP</title>
 </head>
 <body>
 	hello!

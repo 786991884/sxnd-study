@@ -36,7 +36,7 @@
 		</Html>
 	</Template>
 	<Template title="Strange Template" image="template2.gif">
-		<Description>A template that defines two colums, each one with a title, and some text.</Description>
+		<Description>com.xubh.test.A template that defines two colums, each one with a title, and some text.</Description>
 		<Html>
 			<![CDATA[
 				<table cellspacing="0" cellpadding="0" width="100%" border="0">
@@ -62,7 +62,7 @@
 		</Html>
 	</Template>
 	<Template title="Text and Table" image="template3.gif">
-		<Description>A title with some text and a table.</Description>
+		<Description>com.xubh.test.A title with some text and a table.</Description>
 		<Html>
 			<![CDATA[
 				<table align="left" width="80%" border="0" cellspacing="0" cellpadding="0"><tr><td>

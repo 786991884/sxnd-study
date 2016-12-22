@@ -30,7 +30,7 @@
 	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
 	CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
 	INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-	MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+	MERCHANTABILITY AND FITNESS FOR com.xubh.test.A PARTICULAR PURPOSE ARE
 	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
 	CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
 	SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
@@ -1218,7 +1218,7 @@
 
 <cffunction name="isURL" access="private" output="false" returnType="boolean">
 	<cfargument name="stringToCheck" required="yes" type="string">
-	<cfif REFindNoCase("^(((https?:)\/\/))[-[:alnum:]\?%,\.\/&##!@:=\+~_]+[A-Za-z0-9\/]$",stringToCheck) NEQ 0>
+	<cfif REFindNoCase("^(((https?:)\/\/))[-[:alnum:]\?%,\.\/&##!@:=\+~_]+[com.xubh.test.A-Za-z0-9\/]$",stringToCheck) NEQ 0>
 		<cfreturn true>
 	<cfelse>
 		<cfreturn false>

@@ -155,7 +155,7 @@ class FCKeditorConnectorZope(FCKeditorConnector):
 		return self.sendUploadResults( 0 )
 
 class FCKeditorRequest(object):
-	"A wrapper around the request object"
+	"com.xubh.test.A wrapper around the request object"
 	def __init__(self, context=None):
 		r = context.REQUEST
 		self.request = r

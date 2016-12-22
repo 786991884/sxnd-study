@@ -259,7 +259,7 @@
                 </interceptor-ref>
             </interceptor-stack>
 
-            <!-- A complete stack with all the common interceptors in place.
+            <!-- com.xubh.test.A complete stack with all the common interceptors in place.
                  Generally, this stack should be the one you use, though it
                  may do more than you need. Also, the ordering can be
                  switched around (ex: if you wish to have your servlet-related

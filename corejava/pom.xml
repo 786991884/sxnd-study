@@ -16,6 +16,8 @@
         <module>corejava_1</module>
         <module>pattern</module>
         <module>sorm</module>
+        <module>java8</module>
+        <module>to-offer</module>
     </modules>
 
 </project>
