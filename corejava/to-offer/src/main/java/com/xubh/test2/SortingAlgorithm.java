@@ -1,4 +1,4 @@
-package com.xubh.test;
+package com.xubh.test2;
 
 /**
  * 排序算法整理

@@ -4,6 +4,10 @@ public class No19 {
 
     /**
      * 请完成一个函数，输入一个二叉树，该函数输出它的镜像
+     *                 8
+     *            6        10
+     *        5       7   9   11
+     *
      */
     public static void main(String[] args) {
         BinaryTreeNode node1 = new BinaryTreeNode(8);
