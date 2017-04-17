@@ -40,6 +40,16 @@
 7. mybatis
    1. mybatis_1
    2. mybatis_2
+   3. MyBatis_01_HelloWorld
+   4. MyBatis_02_config
+   5. MyBatis_03_mapper
+   6. MyBatis_04_DynamicSQL
+   7. MyBatis_05_cache
+   8. MyBatis_06_ssm
+   9. MyBatis_07_mbg
+   10. MyBatis_08_source
+   11. MyBatis_09_plugin
+   12. MyBatis_11_other
 8. myeshop 商户管理系统后台
 9. shopping 购物系统模拟
 1. spring
