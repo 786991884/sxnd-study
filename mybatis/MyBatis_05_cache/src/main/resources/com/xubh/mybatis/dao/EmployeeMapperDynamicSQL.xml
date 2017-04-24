@@ -176,9 +176,9 @@
 	 	1、多个insert放在begin - end里面
 	 		begin
 			    insert into employees(employee_id,last_name,email) 
-			    values(employees_seq.nextval,'test_001','test_001@atguigu.com');
+			    values(employees_seq.nextval,'test_001','test_001@xubh.com');
 			    insert into employees(employee_id,last_name,email) 
-			    values(employees_seq.nextval,'test_002','test_002@atguigu.com');
+			    values(employees_seq.nextval,'test_002','test_002@xubh.com');
 			end;
 		2、利用中间表：
 			insert into employees(employee_id,last_name,email)

@@ -19,7 +19,7 @@ import java.util.Arrays;
  * 2. 在 Spring 的配置文件中加入 aop 的命名空间。
  * <p>
  * 3. 基于注解的方式来使用 AOP
- * 3.1 在配置文件中配置自动扫描的包: <context:component-scan base-package="com.atguigu.spring.aop"></context:component-scan>
+ * 3.1 在配置文件中配置自动扫描的包: <context:component-scan base-package="com.xubh.spring.aop"></context:component-scan>
  * 3.2 加入使 AspjectJ 注解起作用的配置: <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
  * 为匹配的类自动生成动态代理对象.
  * <p>

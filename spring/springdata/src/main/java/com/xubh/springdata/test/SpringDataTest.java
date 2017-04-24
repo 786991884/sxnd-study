@@ -92,7 +92,7 @@ public class SpringDataTest {
     public void testJpaRepository() {
         Person person = new Person();
         person.setBirth(new Date());
-        person.setEmail("xy@atguigu.com");
+        person.setEmail("xy@xubh.com");
         person.setLastName("xyz");
         person.setId(28);
 
@@ -131,7 +131,7 @@ public class SpringDataTest {
             Person person = new Person();
             person.setAddressId(i + 1);
             person.setBirth(new Date());
-            person.setEmail((char) i + "" + (char) i + "@atguigu.com");
+            person.setEmail((char) i + "" + (char) i + "@xubh.com");
             person.setLastName((char) i + "" + (char) i);
 
             persons.add(person);
@@ -142,8 +142,8 @@ public class SpringDataTest {
 
     @Test
     public void testModifying() {
-//		personRepsotory.updatePersonEmail(1, "mmmm@atguigu.com");
-        personService.updatePersonEmail("mmmm@atguigu.com", 1);
+//		personRepsotory.updatePersonEmail(1, "mmmm@xubh.com");
+        personService.updatePersonEmail("mmmm@xubh.com", 1);
     }
 
     @Test
@@ -166,13 +166,13 @@ public class SpringDataTest {
 
     @Test
     public void testQueryAnnotationParams2() {
-        List<Person> persons = personRepsotory.testQueryAnnotationParams2("aa@atguigu.com", "AA");
+        List<Person> persons = personRepsotory.testQueryAnnotationParams2("aa@xubh.com", "AA");
         System.out.println(persons);
     }
 
     @Test
     public void testQueryAnnotationParams1() {
-        List<Person> persons = personRepsotory.testQueryAnnotationParams1("AA", "aa@atguigu.com");
+        List<Person> persons = personRepsotory.testQueryAnnotationParams1("AA", "aa@xubh.com");
         System.out.println(persons);
     }
 
@@ -196,8 +196,8 @@ public class SpringDataTest {
         persons = personRepsotory.getByLastNameEndingWithAndIdLessThan("X", 10);
         System.out.println(persons);
 
-        persons = personRepsotory.getByEmailInAndBirthLessThan(Arrays.asList("AA@atguigu.com", "FF@atguigu.com",
-                "SS@atguigu.com"), new Date());
+        persons = personRepsotory.getByEmailInAndBirthLessThan(Arrays.asList("AA@xubh.com", "FF@xubh.com",
+                "SS@xubh.com"), new Date());
         System.out.println(persons.size());
     }
 

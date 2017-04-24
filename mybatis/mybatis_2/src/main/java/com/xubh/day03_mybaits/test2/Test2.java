@@ -20,7 +20,7 @@ public class Test2 {
 		//默认是手动提交的
 		SqlSession session = factory.openSession();
 		
-		String statement = "com.atguigu.day03_mybaits.test2.userMapper.addUser";
+		String statement = "com.xubh.day03_mybaits.test2.userMapper.addUser";
 		int insert = session.insert(statement , new User(-1, "KK", 23));
 		//提交
 		session.commit();
@@ -36,7 +36,7 @@ public class Test2 {
 		//默认是手动提交的
 		SqlSession session = factory.openSession(true);
 		
-		String statement = "com.atguigu.day03_mybaits.test2.userMapper.updateUser";
+		String statement = "com.xubh.day03_mybaits.test2.userMapper.updateUser";
 		
 		int update = session.update(statement, new User(4, "KK444", 25));
 		
@@ -50,7 +50,7 @@ public class Test2 {
 		//默认是手动提交的
 		SqlSession session = factory.openSession(true);
 		
-		String statement = "com.atguigu.day03_mybaits.test2.userMapper.deleteUser";
+		String statement = "com.xubh.day03_mybaits.test2.userMapper.deleteUser";
 		
 		int delete = session.delete(statement, 4);
 		
@@ -64,7 +64,7 @@ public class Test2 {
 		//默认是手动提交的
 		SqlSession session = factory.openSession(true);
 		
-		String statement = "com.atguigu.day03_mybaits.test2.userMapper.getUser";
+		String statement = "com.xubh.day03_mybaits.test2.userMapper.getUser";
 		
 		User user = session.selectOne(statement, 1);
 		
@@ -78,7 +78,7 @@ public class Test2 {
 		//默认是手动提交的
 		SqlSession session = factory.openSession(true);
 		
-		String statement = "com.atguigu.day03_mybaits.test2.userMapper.getAllUsers";
+		String statement = "com.xubh.day03_mybaits.test2.userMapper.getAllUsers";
 		
 		List<User> list = session.selectList(statement);
 		

@@ -2,8 +2,9 @@ package com.xubh.crud.dao;
 
 import com.xubh.crud.bean.Department;
 import com.xubh.crud.bean.DepartmentExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface DepartmentMapper {
     long countByExample(DepartmentExample example);

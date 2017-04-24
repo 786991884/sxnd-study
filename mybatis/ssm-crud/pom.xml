@@ -54,6 +54,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>4.1.9.RELEASE</version>
+            <scope>compile</scope>
         </dependency>
 
 
@@ -107,6 +108,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

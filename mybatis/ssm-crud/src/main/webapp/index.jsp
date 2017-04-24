@@ -42,7 +42,7 @@
 		  <div class="form-group">
 		    <label class="col-sm-2 control-label">email</label>
 		    <div class="col-sm-10">
-		      <input type="text" name="email" class="form-control" id="email_update_input" placeholder="email@atguigu.com">
+		      <input type="text" name="email" class="form-control" id="email_update_input" placeholder="email@xubh.com">
 		      <span class="help-block"></span>
 		    </div>
 		  </div>
@@ -97,7 +97,7 @@
 		  <div class="form-group">
 		    <label class="col-sm-2 control-label">email</label>
 		    <div class="col-sm-10">
-		      <input type="text" name="email" class="form-control" id="email_add_input" placeholder="email@atguigu.com">
+		      <input type="text" name="email" class="form-control" id="email_add_input" placeholder="email@xubh.com">
 		      <span class="help-block"></span>
 		    </div>
 		  </div>

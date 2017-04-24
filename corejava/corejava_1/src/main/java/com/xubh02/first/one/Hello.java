@@ -10,7 +10,7 @@ public class Hello {
 //		int c = b*4;
 //		System.out.println(c);
 //
-//		System.out.println("大家好，我是尚学堂的高琪，欢迎大家加入我们的学习！");
+//		System.out.println("大家好，我是上学堂的高琪，欢迎大家加入我们的学习！");
 
 		Scanner s = new Scanner(System.in);
 		String str = s.nextLine();

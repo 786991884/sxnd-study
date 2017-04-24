@@ -2,7 +2,7 @@ package com.xubh01.factory.simplefactory;
 
 /**
  * 简单工厂情况下
- * @author 尚学堂高淇 www.sxt.cn
+ * @author 上学堂高淇 www.sxt.cn
  *
  */
 public class Client02 {   //调用者

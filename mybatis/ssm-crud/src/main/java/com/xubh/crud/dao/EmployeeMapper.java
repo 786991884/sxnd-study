@@ -2,9 +2,9 @@ package com.xubh.crud.dao;
 
 import com.xubh.crud.bean.Employee;
 import com.xubh.crud.bean.EmployeeExample;
-import java.util.List;
-
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface EmployeeMapper {
     long countByExample(EmployeeExample example);
@@ -20,7 +20,7 @@ public interface EmployeeMapper {
     List<Employee> selectByExample(EmployeeExample example);
 
     Employee selectByPrimaryKey(Integer empId);
-    
+
     List<Employee> selectByExampleWithDept(EmployeeExample example);
 
     Employee selectByPrimaryKeyWithDept(Integer empId);

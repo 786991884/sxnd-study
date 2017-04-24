@@ -6,8 +6,8 @@
 	
 	<!-- 配置实体类的别名 -->
 	<typeAliases>
-		<!-- <typeAlias type="com.atguigu.day03_mybaits.test1.User" alias="_User"/> -->
-		<package name="com.atguigu.day03_mybaits.bean"/>
+		<!-- <typeAlias type="com.xubh.day03_mybaits.test1.User" alias="_User"/> -->
+		<package name="com.xubh.day03_mybaits.bean"/>
 	</typeAliases>
 <!-- 
 	development : 开发模式
@@ -26,14 +26,14 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="com/atguigu/day03_mybaits/test1/userMapper.xml"/>
-		<mapper resource="com/atguigu/day03_mybaits/test2/userMapper.xml"/>
+		<mapper resource="com/xubh/day03_mybaits/test1/userMapper.xml"/>
+		<mapper resource="com/xubh/day03_mybaits/test2/userMapper.xml"/>
 		<mapper class="com.xubh.day03_mybaits.test3.UserMapper"/>
-		<mapper resource="com/atguigu/day03_mybaits/test4/orderMapper.xml"/>
-		<mapper resource="com/atguigu/day03_mybaits/test5/ClassMapper.xml"/>
-		<mapper resource="com/atguigu/day03_mybaits/test6/ClassMapper.xml"/>
-		<mapper resource="com/atguigu/day03_mybaits/test7/userMapper.xml"/>
-		<mapper resource="com/atguigu/day03_mybaits/test8/userMapper.xml"/>
-		<mapper resource="com/atguigu/day03_mybaits/test9/userMapper.xml"/>
+		<mapper resource="com/xubh/day03_mybaits/test4/orderMapper.xml"/>
+		<mapper resource="com/xubh/day03_mybaits/test5/ClassMapper.xml"/>
+		<mapper resource="com/xubh/day03_mybaits/test6/ClassMapper.xml"/>
+		<mapper resource="com/xubh/day03_mybaits/test7/userMapper.xml"/>
+		<mapper resource="com/xubh/day03_mybaits/test8/userMapper.xml"/>
+		<mapper resource="com/xubh/day03_mybaits/test9/userMapper.xml"/>
 	</mappers>
 </configuration>

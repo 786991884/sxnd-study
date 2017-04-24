@@ -47,8 +47,8 @@
    		缓存区域(region)：一个具有名称的缓存块，可以给每一个缓存块设置不同的缓存策略。
    		如果没有设置任何的缓存区域，则所有被缓存的对象，都将使用默认的缓存策略。即：<defaultCache.../>
    		Hibernate 在不同的缓存区域保存不同的类/集合。
-			对于类而言，区域的名称是类名。如:com.atguigu.domain.Customer
-			对于集合而言，区域的名称是类名加属性名。如com.atguigu.domain.Customer.orders
+			对于类而言，区域的名称是类名。如:com.xubh.domain.Customer
+			对于集合而言，区域的名称是类名加属性名。如com.xubh.domain.Customer.orders
    	-->
    	<!--  
    		name: 设置缓存的名字,它的取值为类的全限定名或类的集合的名字 

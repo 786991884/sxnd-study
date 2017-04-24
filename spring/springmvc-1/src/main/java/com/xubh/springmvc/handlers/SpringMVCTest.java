@@ -50,7 +50,7 @@ public class SpringMVCTest {
         System.out.println("modelAttribute method");
         if (id != null) {
             //模拟从数据库中获取对象
-            User user = new User(1, "Tom", "123456", "tom@atguigu.com", 12);
+            User user = new User(1, "Tom", "123456", "tom@xubh.com", 12);
             System.out.println("从数据库中获取一个对象: " + user);
 
             map.put("user", user);
@@ -112,9 +112,9 @@ public class SpringMVCTest {
      */
     @RequestMapping("/testSessionAttributes")
     public String testSessionAttributes(Map<String, Object> map) {
-        User user = new User("Tom", "123456", "tom@atguigu.com", 15);
+        User user = new User("Tom", "123456", "tom@xubh.com", 15);
         map.put("user", user);
-        map.put("school", "atguigu");
+        map.put("school", "xubh");
         return SUCCESS;
     }
 

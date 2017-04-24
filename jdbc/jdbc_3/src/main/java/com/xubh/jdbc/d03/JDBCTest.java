@@ -82,7 +82,7 @@ public class JDBCTest {
 			preparedStatement = connection.prepareStatement(sql);
 
 			preparedStatement.setString(1, "ABCDE");
-			preparedStatement.setString(2, "abcde@atguigu.com");
+			preparedStatement.setString(2, "abcde@xubh.com");
 			preparedStatement.setDate(3,
 					new Date(new java.util.Date().getTime()));
 
@@ -118,7 +118,7 @@ public class JDBCTest {
 					Statement.RETURN_GENERATED_KEYS);
 
 			preparedStatement.setString(1, "ABCDE");
-			preparedStatement.setString(2, "abcde@atguigu.com");
+			preparedStatement.setString(2, "abcde@xubh.com");
 			preparedStatement.setDate(3,
 					new Date(new java.util.Date().getTime()));
 

@@ -17,7 +17,7 @@ public class Test7 {
 		SqlSessionFactory factory = MybatisUtils.getFactory();
 		SqlSession session = factory.openSession();
 		
-		String statement = "com.atguigu.day03_mybaits.test7.userMapper.getUser";
+		String statement = "com.xubh.day03_mybaits.test7.userMapper.getUser";
 		
 		String name = "o";
 		name = null;

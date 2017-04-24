@@ -12,7 +12,7 @@ public class EmployeeConverter implements Converter<String, Employee> {
 	public Employee convert(String source) {
 		if(source != null){
 			String [] vals = source.split("-");
-			//GG-gg@atguigu.com-0-105
+			//GG-gg@xubh.com-0-105
 			if(vals != null && vals.length == 4){
 				String lastName = vals[0];
 				String email = vals[1];

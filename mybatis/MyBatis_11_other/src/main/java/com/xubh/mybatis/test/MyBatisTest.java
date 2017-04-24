@@ -71,7 +71,7 @@ public class MyBatisTest {
 		SqlSession openSession = sqlSessionFactory.openSession();
 		try {
 			Employee employee = openSession.selectOne(
-					"com.atguigu.mybatis.EmployeeMapper.selectEmp", 1);
+					"com.xubh.mybatis.EmployeeMapper.selectEmp", 1);
 			System.out.println(employee);
 		} finally {
 			openSession.close();
@@ -190,7 +190,7 @@ public class MyBatisTest {
 		SqlSession openSession = sqlSessionFactory.openSession();
 		try{
 			EmployeeMapper mapper = openSession.getMapper(EmployeeMapper.class);
-			Employee employee = new Employee("test_enum", "enum@atguigu.com","1");
+			Employee employee = new Employee("test_enum", "enum@xubh.com","1");
 			//mapper.addEmp(employee);
 			//System.out.println("保存成功"+employee.getId());
 			//openSession.commit();

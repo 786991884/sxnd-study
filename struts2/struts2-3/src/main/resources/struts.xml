@@ -35,23 +35,23 @@
 			<!--  
 			<result name="index" type="redirectAction">
 				<param name="actionName">testAction</param>
-				<param name="namespace">/atguigu</param>
+				<param name="namespace">/xubh</param>
 			</result>
 			-->
 			
 			<!-- 通过 redirect 的响应类型也可以便捷的实现 redirectAction 的功能! -->
-			<result name="index" type="redirect">/atguigu/testAction.do</result>
+			<result name="index" type="redirect">/xubh/testAction.do</result>
 			
 			<!-- 转发到一个 Action -->
 			<!--  
 			<result name="test" type="chain">
 				<param name="actionName">testAction</param>
-				<param name="namespace">/atguigu</param>
+				<param name="namespace">/xubh</param>
 			</result>
 			-->
 			
 			<!-- 不能通过 type=dispatcher 的方式转发到一个 Action -->
-			<result name="test">/atguigu/testAction.do</result>
+			<result name="test">/xubh/testAction.do</result>
 			
 			
 		</action>
@@ -64,7 +64,7 @@
 
     </package>
     
-    <package name="testPackage" namespace="/atguigu" extends="struts-default">
+    <package name="testPackage" namespace="/xubh" extends="struts-default">
     	<action name="testAction" 
     		class="com.xubh.struts2.action.TestAction">
     		<result>/success.jsp</result>

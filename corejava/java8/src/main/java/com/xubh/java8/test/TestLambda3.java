@@ -31,7 +31,7 @@ public class TestLambda3 {
     //Predicate<T> 断言型接口：
     @Test
     public void test4() {
-        List<String> list = Arrays.asList("Hello", "atguigu", "Lambda", "www", "ok");
+        List<String> list = Arrays.asList("Hello", "xubh", "Lambda", "www", "ok");
         List<String> strList = filterStr(list, (s) -> s.length() > 3);
 
         for (String str : strList) {
@@ -55,10 +55,10 @@ public class TestLambda3 {
     //Function<T, R> 函数型接口：
     @Test
     public void test3() {
-        String newStr = strHandler("\t\t\t 我大尚硅谷威武   ", (str) -> str.trim());
+        String newStr = strHandler("\t\t\t 我大硅谷威武   ", (str) -> str.trim());
         System.out.println(newStr);
 
-        String subStr = strHandler("我大尚硅谷威武", (str) -> str.substring(2, 5));
+        String subStr = strHandler("我大硅谷威武", (str) -> str.substring(2, 5));
         System.out.println(subStr);
     }
 

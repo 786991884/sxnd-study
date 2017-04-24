@@ -61,8 +61,8 @@
     	<property name="current_session_context_class">thread</property>
     	
     	<!-- 需要关联的 hibernate 映射文件 .hbm.xml -->
-		<mapping resource="com/atguigu/hibernate/entities/Department.hbm.xml"/>
-		<mapping resource="com/atguigu/hibernate/entities/Employee.hbm.xml"/>
+		<mapping resource="com/xubh/hibernate/entities/Department.hbm.xml"/>
+		<mapping resource="com/xubh/hibernate/entities/Employee.hbm.xml"/>
 		
 		<class-cache usage="read-write" class="com.xubh.hibernate.entities.Employee"/>
 		<class-cache usage="read-write" class="com.xubh.hibernate.entities.Department"/>

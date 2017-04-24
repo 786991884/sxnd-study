@@ -21,7 +21,7 @@ public class Test {
 		
 		SqlSession session = factory.openSession();
 		
-		String statement = "com.atguigu.day03_mybaits.test1.userMapper.getUser";
+		String statement = "com.xubh.day03_mybaits.test1.userMapper.getUser";
 		
 		User user = session.selectOne(statement, 2);
 		System.out.println(user);

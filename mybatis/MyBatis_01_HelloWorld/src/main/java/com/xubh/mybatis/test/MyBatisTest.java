@@ -60,7 +60,7 @@ public class MyBatisTest {
         SqlSession openSession = sqlSessionFactory.openSession();
         try {
             Employee employee = openSession.selectOne(
-                    "com.atguigu.mybatis.EmployeeMapper.selectEmp", 1);
+                    "com.xubh.mybatis.EmployeeMapper.selectEmp", 1);
             System.out.println(employee);
         } finally {
             openSession.close();

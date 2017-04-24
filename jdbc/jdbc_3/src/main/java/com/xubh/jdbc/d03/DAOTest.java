@@ -13,7 +13,7 @@ public class DAOTest {
 	public void testUpdate() {
 		String sql = "INSERT INTO customers(name, " +
 				"email, birth) VALUES(?,?,?)";
-		dao.update(sql, "XiaoMing", "xiaoming@atguigu.com", 
+		dao.update(sql, "XiaoMing", "xiaoming@xubh.com",
 				new Date(new java.util.Date().getTime()));
 	}
 

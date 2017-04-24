@@ -33,7 +33,7 @@ public class Main {
 		//4. 进行持久化操作
 		Customer customer = new Customer();
 		customer.setAge(12);
-		customer.setEmail("tom@atguigu.com");
+		customer.setEmail("tom@xubh.com");
 		customer.setLastName("Tom");
 		customer.setBirth(new Date());
 		customer.setCreatedTime(new Date());

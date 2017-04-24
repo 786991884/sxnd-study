@@ -9,11 +9,11 @@
 </head>
 <body>
 	
-	<a href="TestActionContext.action?name=atguigu">Test ActionContext</a>
+	<a href="TestActionContext.action?name=xubh">Test ActionContext</a>
 	
 	<br><br>
 	
-	<a href="TestAware.do?name=atguigu">Test Aware</a>
+	<a href="TestAware.do?name=xubh">Test Aware</a>
 
 	<br><br>
 	

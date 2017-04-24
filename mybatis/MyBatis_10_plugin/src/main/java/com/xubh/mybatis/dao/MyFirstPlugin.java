@@ -28,7 +28,6 @@ public class MyFirstPlugin implements Interceptor{
 	 */
 	@Override
 	public Object intercept(Invocation invocation) throws Throwable {
-		// TODO Auto-generated method stub
 		System.out.println("MyFirstPlugin...intercept:"+invocation.getMethod());
 		//动态的改变一下sql运行的参数：以前1号员工，实际从数据库查询3号员工
 		Object target = invocation.getTarget();
@@ -52,7 +51,6 @@ public class MyFirstPlugin implements Interceptor{
 	 */
 	@Override
 	public Object plugin(Object target) {
-		// TODO Auto-generated method stub
 		//我们可以借助Plugin的wrap方法来使用当前Interceptor包装我们目标对象
 		System.out.println("MyFirstPlugin...plugin:mybatis将要包装的对象"+target);
 		Object wrap = Plugin.wrap(target, this);
@@ -66,7 +64,6 @@ public class MyFirstPlugin implements Interceptor{
 	 */
 	@Override
 	public void setProperties(Properties properties) {
-		// TODO Auto-generated method stub
 		System.out.println("插件配置的信息："+properties);
 	}
 

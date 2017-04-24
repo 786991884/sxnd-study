@@ -18,7 +18,7 @@ public class Demo02 {
         ScriptEngine engine = sem.getEngineByName("javascript");
         //定义变量
         engine.put("msg", "gaoqi is a good man!");// 向上下文中定义一个变量
-        String str = "var user = {name:'gaoqi',age:18,schools:['清华大学','北京尚学堂']}; ";
+        String str = "var user = {name:'gaoqi',age:18,schools:['清华大学','北京上学堂']}; ";
         str += "println(user.name);";
         //执行脚本
         engine.eval(str);
@@ -35,7 +35,7 @@ public class Demo02 {
         System.out.println(result1);
 
         // 导入其他java包,使用其他包中的java类
-        String jsCode = "importPackage(java.util); var list = Arrays.asList([\"北京尚学堂\",\"清华大学\",\"北京大学\"]); ";
+        String jsCode = "importPackage(java.util); var list = Arrays.asList([\"北京上学堂\",\"清华大学\",\"北京大学\"]); ";
         engine.eval(jsCode);
         List<String> list2 = (List<String>) engine.get("list");
         for (String temp : list2) {

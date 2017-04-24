@@ -5,7 +5,7 @@
 
 	<bean id="person"
 		class="com.xubh.spring.struts2.beans.Person">
-		<property name="username" value="atguigu"></property>
+		<property name="username" value="xubh"></property>
 	</bean>
 	
 </beans>

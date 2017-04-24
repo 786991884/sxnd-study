@@ -66,7 +66,7 @@ public class ReviewTest {
 			preparedStatement = connection.prepareStatement(sql);
 
 			//2. 填充占位符
-			preparedStatement.setString(1, "atguigu@gmail.com");
+			preparedStatement.setString(1, "xubh@gmail.com");
 			preparedStatement.setInt(2, 5);
 
 			//3. 调用 executeUpdate() 或 executeQuery() 方法执行 SQL 操作.

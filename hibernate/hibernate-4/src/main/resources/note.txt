@@ -14,7 +14,7 @@ II.  配置hibernate二级缓存使用的产品
 <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
 
 III. 配置对哪些类使用 hibernate 的二级缓存
-<class-cache usage="read-write" class="com.atguigu.hibernate.entities.Employee"/>
+<class-cache usage="read-write" class="com.xubh.hibernate.entities.Employee"/>
 		
 实际上也可以在 .hbm.xml 文件中配置对哪些类使用二级缓存, 及二级缓存的策略是什么. 
 
@@ -22,7 +22,7 @@ III. 配置对哪些类使用 hibernate 的二级缓存
 
 I. 配置对集合使用二级缓存
 
-<collection-cache usage="read-write" collection="com.atguigu.hibernate.entities.Department.emps"/>
+<collection-cache usage="read-write" collection="com.xubh.hibernate.entities.Department.emps"/>
 
 也可以在 .hbm.xml 文件中进行配置
 
@@ -31,7 +31,7 @@ I. 配置对集合使用二级缓存
     <key>
         <column name="DEPT_ID" />
     </key>
-    <one-to-many class="com.atguigu.hibernate.entities.Employee" />
+    <one-to-many class="com.xubh.hibernate.entities.Employee" />
 </set>
 
 II. 注意: 还需要配置集合中的元素对应的持久化类也使用二级缓存! 否则将会多出 n 条 SQL 语句. 

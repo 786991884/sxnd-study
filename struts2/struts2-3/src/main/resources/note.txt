@@ -21,12 +21,12 @@
     	
     <result name="index" type="redirectAction">
 		<param name="actionName">testAction</param>
-		<param name="namespace">/atguigu</param>
+		<param name="namespace">/xubh</param>
 	</result>
 	
 	OR
 	
-	<result name="index" type="redirect">/atguigu/testAction.do</result>
+	<result name="index" type="redirect">/xubh/testAction.do</result>
     	
     > chain: 转发到一个 Action
     	注意: 不能通过 type=dispatcher 的方式转发到一个 Action
@@ -35,12 +35,12 @@
          
     <result name="test" type="chain">
 		<param name="actionName">testAction</param>
-		<param name="namespace">/atguigu</param>
+		<param name="namespace">/xubh</param>
 	</result>
 	
 	不能是:
 	
-	<result name="test">/atguigu/testAction.do</result>
+	<result name="test">/xubh/testAction.do</result>
 			
 			     
 

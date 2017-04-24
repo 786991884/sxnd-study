@@ -121,7 +121,7 @@ public class JDBCTest {
 			String sql = null;
 
 //			sql = "INSERT INTO customers (NAME, EMAIL, BIRTH) " +
-//					"VALUES('XYZ', 'xyz@atguigu.com', '1990-12-12')";
+//					"VALUES('XYZ', 'xyz@xubh.com', '1990-12-12')";
 //			sql = "DELETE FROM customers WHERE id = 1";
 			sql = "UPDATE customers SET name = 'TOM' " +
 					"WHERE id = 4";

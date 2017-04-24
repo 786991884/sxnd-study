@@ -18,7 +18,7 @@ public class Demo01 {
 
         //定义变量,存储到引擎上下文中
         engine.put("msg", "gaoqi is a good man!");
-        String str = "var user = {name:'gaoqi',age:18,schools:['清华大学','北京尚学堂']};";
+        String str = "var user = {name:'gaoqi',age:18,schools:['清华大学','北京上学堂']};";
         str += "println(user.name);";
 
         //执行脚本
@@ -36,7 +36,7 @@ public class Demo01 {
         System.out.println(result1);
 
         //导入其他java包，使用其他包中的java类.若需要深入了解细节，可以详细学习Rhino的语法
-        String jsCode = "importPackage(java.util); var list=Arrays.asList([\"北京尚学堂\",\"清华大学\",\"北京大学\"]);";
+        String jsCode = "importPackage(java.util); var list=Arrays.asList([\"北京上学堂\",\"清华大学\",\"北京大学\"]);";
         engine.eval(jsCode);
 
         List<String> list2 = (List<String>) engine.get("list");

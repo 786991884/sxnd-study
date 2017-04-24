@@ -51,11 +51,11 @@
 		<mapping resource="com/xubh/hibernate/strategy/Order.hbm.xml"/>
 		
     	<!--  
-		<mapping resource="com/atguigu/hibernate/union/subclass/Person.hbm.xml"/>
-		<mapping resource="com/atguigu/hibernate/n2n/Category.hbm.xml"/>
-		<mapping resource="com/atguigu/hibernate/n2n/Item.hbm.xml"/>
-		<mapping resource="com/atguigu/hibernate/one2one/primary/Manager.hbm.xml"/>
-		<mapping resource="com/atguigu/hibernate/one2one/primary/Department.hbm.xml"/>
+		<mapping resource="com/xubh/hibernate/union/subclass/Person.hbm.xml"/>
+		<mapping resource="com/xubh/hibernate/n2n/Category.hbm.xml"/>
+		<mapping resource="com/xubh/hibernate/n2n/Item.hbm.xml"/>
+		<mapping resource="com/xubh/hibernate/one2one/primary/Manager.hbm.xml"/>
+		<mapping resource="com/xubh/hibernate/one2one/primary/Department.hbm.xml"/>
 		-->
 		    
     </session-factory>

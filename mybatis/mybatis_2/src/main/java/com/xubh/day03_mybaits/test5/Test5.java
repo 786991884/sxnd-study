@@ -14,9 +14,9 @@ public class Test5 {
 		SqlSessionFactory factory = MybatisUtils.getFactory();
 		SqlSession session = factory.openSession();
 		
-		String statement = "com.atguigu.day03_mybaits.test5.ClassMapper.getClass";
+		String statement = "com.xubh.day03_mybaits.test5.ClassMapper.getClass";
 		
-		statement = "com.atguigu.day03_mybaits.test5.ClassMapper.getClass2";
+		statement = "com.xubh.day03_mybaits.test5.ClassMapper.getClass2";
 	
 		
 		Classes c = session.selectOne(statement , 2);

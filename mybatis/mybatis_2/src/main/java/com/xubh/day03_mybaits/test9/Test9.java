@@ -25,7 +25,7 @@ public class Test9 {
 		SqlSession session = factory.openSession();
 		
 		
-		String statement = "com.atguigu.day03_mybaits.test9.userMapper.getUser";
+		String statement = "com.xubh.day03_mybaits.test9.userMapper.getUser";
 		CUser user = session.selectOne(statement, 1);
 		System.out.println(user);
 		
@@ -39,7 +39,7 @@ public class Test9 {
 		*/
 		/*
 		//2. 执行CUD操作
-		session.update("com.atguigu.day03_mybaits.test9.userMapper.updateUser", new CUser(1, "Tom", 13));
+		session.update("com.xubh.day03_mybaits.test9.userMapper.updateUser", new CUser(1, "Tom", 13));
 		session.commit();
 		*/
 		
@@ -63,7 +63,7 @@ public class Test9 {
 		SqlSession session1 = factory.openSession();
 		SqlSession session2 = factory.openSession();
 		
-		String statement = "com.atguigu.day03_mybaits.test9.userMapper.getUser";
+		String statement = "com.xubh.day03_mybaits.test9.userMapper.getUser";
 		CUser user = session1.selectOne(statement, 1);
 		session1.commit();
 		System.out.println(user);

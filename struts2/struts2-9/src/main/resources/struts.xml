@@ -15,7 +15,7 @@
 			
 			<interceptor name="hello" class="com.xubh.struts2.interceptors.MyInterceptor"></interceptor>
 		
-			<interceptor-stack name="atguigustack">
+			<interceptor-stack name="xubhstack">
 				<interceptor-ref name="defaultStack">
 					<param name="fileUpload.maximumSize">2097152</param>
 					<!--  	
@@ -27,7 +27,7 @@
 			
 		</interceptors>
 		
-		<default-interceptor-ref name="atguigustack"></default-interceptor-ref>
+		<default-interceptor-ref name="xubhstack"></default-interceptor-ref>
 		
 		<action name="testUpload" 
 			class="com.xubh.struts2.upload.app.UploadAction">

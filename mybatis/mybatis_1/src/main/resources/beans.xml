@@ -25,7 +25,7 @@
 	-->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="datasource"/>
-		<property name="typeAliasesPackage" value="com.atguigu.day03_ms.bean"/>
+		<property name="typeAliasesPackage" value="com.xubh.day03_ms.bean"/>
 	</bean>
 
 	<!-- 
@@ -33,7 +33,7 @@
 			sqlSessionFactory / basePackage
 	-->
 	<bean id="config" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.atguigu.day03_ms.mapper"/>
+		<property name="basePackage" value="com.xubh.day03_ms.mapper"/>
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
 	</bean>
 	

@@ -74,7 +74,7 @@ public class HibernateTest {
 		Student stu = new Student();
 		stu.setAge(22);
 		stu.setName("BB");
-		stu.setSchool("ATGUIGU");
+		stu.setSchool("xubh");
 		
 		session.save(stu);
 		

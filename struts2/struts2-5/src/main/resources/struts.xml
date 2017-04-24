@@ -11,14 +11,14 @@
 		<!-- 配置使用 paramsPrepareParamsStack 作为默认的拦截器栈 -->
 		<!-- 修改 PrepareInterceptor 拦截器的 alwaysInvokePrepare 属性值为 false -->
 		<interceptors>
-		    <interceptor-stack name="atguigustack">
+		    <interceptor-stack name="xubhstack">
 		        <interceptor-ref name="paramsPrepareParamsStack">
 		            <param name="prepare.alwaysInvokePrepare">false</param>
 		        </interceptor-ref>
 		    </interceptor-stack>
 		</interceptors>
  
-		<default-interceptor-ref name="atguigustack"/>
+		<default-interceptor-ref name="xubhstack"/>
 
 		<action name="emp-*" 
 			class="com.xubh.struts2.app.EmployeeAction"

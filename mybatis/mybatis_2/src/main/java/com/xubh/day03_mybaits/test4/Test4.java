@@ -14,8 +14,8 @@ public class Test4 {
 		SqlSessionFactory factory = MybatisUtils.getFactory();
 		SqlSession session = factory.openSession();
 		
-		String statement = "com.atguigu.day03_mybaits.test4.orderMapper.getOrder";
-		statement = "com.atguigu.day03_mybaits.test4.orderMapper.getOrder2";
+		String statement = "com.xubh.day03_mybaits.test4.orderMapper.getOrder";
+		statement = "com.xubh.day03_mybaits.test4.orderMapper.getOrder2";
 		Order order = session.selectOne(statement , 2);
 		System.out.println(order);
 	}

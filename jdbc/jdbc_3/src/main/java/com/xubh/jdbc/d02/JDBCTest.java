@@ -303,7 +303,7 @@ public class JDBCTest {
 					+ "VALUES(?,?,?)";
 
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, "ATGUIGU");
+			preparedStatement.setString(1, "xubh");
 			preparedStatement.setString(2, "simpleit@163.com");
 			preparedStatement.setDate(3,
 					new Date(new java.util.Date().getTime()));

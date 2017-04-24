@@ -1,7 +1,7 @@
 package com.xubh01.builder;
 
 /**
- * 尚学堂牌宇宙飞船
+ * 上学堂牌宇宙飞船
  */
 public class AirShip {
 

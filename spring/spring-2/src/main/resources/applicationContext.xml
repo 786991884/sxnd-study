@@ -17,7 +17,7 @@
 		scope="singleton"
 		init-method="init"
 		destroy-method="destroy">
-		<property name="userName" value="atguigu"></property>
+		<property name="userName" value="xubh"></property>
 	</bean>
 	
 	<!--  

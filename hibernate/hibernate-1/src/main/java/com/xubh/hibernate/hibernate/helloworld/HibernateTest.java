@@ -42,7 +42,7 @@ public class HibernateTest {
 		Transaction transaction = session.beginTransaction();
 		
 		//4. 执行保存操作
-		News news = new News("Java12345", "ATGUIGU", new Date(new java.util.Date().getTime()));
+		News news = new News("Java12345", "xubh", new Date(new java.util.Date().getTime()));
 		session.save(news);
 		
 		//5. 提交事务 

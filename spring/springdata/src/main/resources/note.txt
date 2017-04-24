@@ -53,7 +53,7 @@ Caused by: org.hibernate.AnnotationException: Use of the same entity name twice:
 	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96)
 	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914)
 	... 40 more
-Caused by: org.hibernate.DuplicateMappingException: duplicate import: Address refers to both com.atguigu.springdata.commonrepositorymethod.Address and Address (try using auto-import="false")
+Caused by: org.hibernate.DuplicateMappingException: duplicate import: Address refers to both com.xubh.springdata.commonrepositorymethod.Address and Address (try using auto-import="false")
 	at org.hibernate.cfg.Configuration$MappingsImpl.addImport(Configuration.java:2667)
 	at org.hibernate.cfg.annotations.EntityBinder.bindEntity(EntityBinder.java:396)
 	... 47 more

@@ -79,7 +79,7 @@ public class HibernateTest {
 		DepartmentDao departmentDao = new DepartmentDao();
 		
 		Department dept = new Department();
-		dept.setName("ATGUIGU");
+		dept.setName("xubh");
 		
 		departmentDao.save(dept);
 		departmentDao.save(dept);
@@ -182,7 +182,7 @@ public class HibernateTest {
 		Query query = session.createSQLQuery(sql);
 		
 		query.setInteger(0, 280)
-		     .setString(1, "ATGUIGU")
+		     .setString(1, "xubh")
 		     .executeUpdate();
 	}
 	

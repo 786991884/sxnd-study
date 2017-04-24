@@ -10,11 +10,11 @@ public class Dao {
 	private static Map<Integer, Employee> emps = new LinkedHashMap<Integer, Employee>();
 	
 	static{
-		emps.put(1001, new Employee(1001, "AA", "aa", "aa@atguigu.com"));
-		emps.put(1002, new Employee(1002, "BB", "bb", "bb@atguigu.com"));
-		emps.put(1003, new Employee(1003, "CC", "cc", "cc@atguigu.com"));
-		emps.put(1004, new Employee(1004, "DD", "dd", "dd@atguigu.com"));
-		emps.put(1005, new Employee(1005, "EE", "ee", "ee@atguigu.com"));
+		emps.put(1001, new Employee(1001, "AA", "aa", "aa@xubh.com"));
+		emps.put(1002, new Employee(1002, "BB", "bb", "bb@xubh.com"));
+		emps.put(1003, new Employee(1003, "CC", "cc", "cc@xubh.com"));
+		emps.put(1004, new Employee(1004, "DD", "dd", "dd@xubh.com"));
+		emps.put(1005, new Employee(1005, "EE", "ee", "ee@xubh.com"));
 	}
 	
 	public List<Employee> getEmployees(){

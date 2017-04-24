@@ -74,8 +74,8 @@ public class MyBatisTest {
 		try{
 			EmployeeMapperDynamicSQL mapper = openSession.getMapper(EmployeeMapperDynamicSQL.class);
 			List<Employee> emps = new ArrayList<>();
-			emps.add(new Employee(null, "smith0x1", "smith0x1@atguigu.com", "1",new Department(1)));
-			emps.add(new Employee(null, "allen0x1", "allen0x1@atguigu.com", "0",new Department(1)));
+			emps.add(new Employee(null, "smith0x1", "smith0x1@xubh.com", "1",new Department(1)));
+			emps.add(new Employee(null, "allen0x1", "allen0x1@xubh.com", "0",new Department(1)));
 			mapper.addEmps(emps);
 			openSession.commit();
 		}finally{
@@ -152,7 +152,7 @@ public class MyBatisTest {
 		SqlSession openSession = sqlSessionFactory.openSession();
 		try {
 			Employee employee = openSession.selectOne(
-					"com.atguigu.mybatis.EmployeeMapper.selectEmp", 1);
+					"com.xubh.mybatis.EmployeeMapper.selectEmp", 1);
 			System.out.println(employee);
 		} finally {
 			openSession.close();
@@ -216,7 +216,7 @@ public class MyBatisTest {
 			System.out.println(employee.getId());
 			
 			//测试修改
-			//Employee employee = new Employee(1, "Tom", "jerry@atguigu.com", "0");
+			//Employee employee = new Employee(1, "Tom", "jerry@xubh.com", "0");
 			//boolean updateEmp = mapper.updateEmp(employee);
 			//System.out.println(updateEmp);
 			//测试删除

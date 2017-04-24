@@ -48,7 +48,7 @@ public class JDBCTest {
 	public void testC3P0() throws Exception{
 		ComboPooledDataSource cpds = new ComboPooledDataSource();
 		cpds.setDriverClass( "com.mysql.jdbc.Driver" ); //loads the jdbc driver
-		cpds.setJdbcUrl( "jdbc:mysql:///atguigu" );
+		cpds.setJdbcUrl( "jdbc:mysql:///xubh" );
 		cpds.setUser("root");
 		cpds.setPassword("1230");
 
@@ -96,7 +96,7 @@ public class JDBCTest {
 		//2. 为数据源实例指定必须的属性
 		dataSource.setUsername("root");
 		dataSource.setPassword("1230");
-		dataSource.setUrl("jdbc:mysql:///atguigu");
+		dataSource.setUrl("jdbc:mysql:///xubh");
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 
 		//3. 指定数据源的一些可选的属性.

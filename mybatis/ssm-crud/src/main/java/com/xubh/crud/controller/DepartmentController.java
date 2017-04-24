@@ -1,36 +1,33 @@
 package com.xubh.crud.controller;
 
-import java.util.List;
-
 import com.xubh.crud.bean.Department;
 import com.xubh.crud.bean.Msg;
+import com.xubh.crud.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.xubh.crud.service.DepartmentService;
+import java.util.List;
 
 /**
  * 处理和部门有关的请求
- * @author lfy
- *
  */
 @Controller
 public class DepartmentController {
-	
-	@Autowired
-	private DepartmentService departmentService;
-	
-	/**
-	 * 返回所有的部门信息
-	 */
-	@RequestMapping("/depts")
-	@ResponseBody
-	public Msg getDepts(){
-		//查出的所有部门信息
-		List<Department> list = departmentService.getDepts();
-		return Msg.success().add("depts", list);
-	}
+
+    @Autowired
+    private DepartmentService departmentService;
+
+    /**
+     * 返回所有的部门信息
+     */
+    @RequestMapping("/depts")
+    @ResponseBody
+    public Msg getDepts() {
+        //查出的所有部门信息
+        List<Department> list = departmentService.getDepts();
+        return Msg.success().add("depts", list);
+    }
 
 }

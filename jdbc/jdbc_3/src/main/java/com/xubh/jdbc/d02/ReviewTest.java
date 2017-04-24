@@ -173,7 +173,7 @@ public class ReviewTest {
 		//1. 准备获取连接的 4 个字符串: user, password, jdbcUrl, driverClass
 		String user = "root";
 		String password = "1230";
-		String jdbcUrl = "jdbc:mysql:///atguigu";
+		String jdbcUrl = "jdbc:mysql:///xubh";
 		String driverClass = "com.mysql.jdbc.Driver";
 
 		//2. 加载驱动: Class.forName(driverClass)

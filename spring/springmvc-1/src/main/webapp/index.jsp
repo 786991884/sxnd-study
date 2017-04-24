@@ -19,7 +19,7 @@
 	
 	<!--  
 		模拟修改操作
-		1. 原始数据为: 1, Tom, 123456,tom@atguigu.com,12
+		1. 原始数据为: 1, Tom, 123456,tom@xubh.com,12
 		2. 密码不能被修改.
 		3. 表单回显, 模拟操作直接在表单填写对应的属性值
 	-->
@@ -27,7 +27,7 @@
 		<input type="hidden" name="id" value="1"/>
 		username: <input type="text" name="username" value="Tom"/>
 		<br>
-		email: <input type="text" name="email" value="tom@atguigu.com"/>
+		email: <input type="text" name="email" value="tom@xubh.com"/>
 		<br>
 		age: <input type="text" name="age" value="12"/>
 		<br>
@@ -70,7 +70,7 @@
 	<a href="springmvc/testRequestHeader">Test RequestHeader</a>
 	<br><br>
 	
-	<a href="springmvc/testRequestParam?username=atguigu&age=11">Test RequestParam</a>
+	<a href="springmvc/testRequestParam?username=xubh&age=11">Test RequestParam</a>
 	<br><br>
 	
 	<form action="springmvc/testRest/1" method="post">
@@ -99,7 +99,7 @@
 	<a href="springmvc/testAntPath/mnxyz/abc">Test AntPath</a>
 	<br><br>
 
-	<a href="springmvc/testParamsAndHeaders?username=atguigu&age=10">Test ParamsAndHeaders</a>
+	<a href="springmvc/testParamsAndHeaders?username=xubh&age=10">Test ParamsAndHeaders</a>
 	<br><br>
 	
 	<form action="springmvc/testMethod" method="POST">

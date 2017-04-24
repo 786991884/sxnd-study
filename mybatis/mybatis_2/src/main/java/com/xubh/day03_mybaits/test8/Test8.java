@@ -17,7 +17,7 @@ public class Test8 {
 		SqlSessionFactory factory = MybatisUtils.getFactory();
 		SqlSession session = factory.openSession();
 		
-		String statement = "com.atguigu.day03_mybaits.test8.userMapper.getUserCount";
+		String statement = "com.xubh.day03_mybaits.test8.userMapper.getUserCount";
 		
 		Map<String, Integer> parameterMap = new HashMap<String, Integer>();
 		parameterMap.put("sexid", 1);

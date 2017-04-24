@@ -11,29 +11,29 @@
 			/*
 			1. 创建节点: 使用 $(html) 方式即可, 元素节点, 文本节点, 属性节点可以一网打尽
 			返回对应节点的 jQuery 对象:
-			$("<li id='atguigu'>尚硅谷</li>")
+			$("<li id='xubh'>硅谷</li>")
 			
 			2. 添加节点:
 			1). appendTo 和 append: 主语和宾语的位置不同:  
-			$("<li id='atguigu'>尚硅谷</li>").appendTo($("#city"));	
-			$("#city").append("<li id='atguigu'>[尚硅谷]</li>");
+			$("<li id='xubh'>硅谷</li>").appendTo($("#city"));
+			$("#city").append("<li id='xubh'>[硅谷]</li>");
 			
 			2). prependTo 和  prepend: 主语和宾语的位置不同: 
-			$("<li id='atguigu'>尚硅谷</li>").prependTo($("#city"));
-			$("#city").prepend("<li id='atguigu'>[尚硅谷]</li>");	
+			$("<li id='xubh'>硅谷</li>").prependTo($("#city"));
+			$("#city").prepend("<li id='xubh'>[硅谷]</li>");
 			*/
 			$(function(){
-				//1. 创建一个 <li id="atguigu">尚硅谷</li>
+				//1. 创建一个 <li id="xubh">硅谷</li>
 				//2. 并把其加入到 #city 的子节点
-				//$("<li id='atguigu'>尚硅谷</li>").appendTo($("#city"));
-				//$("#city").append("<li id='atguigu'>[尚硅谷]</li>");
+				//$("<li id='xubh'>硅谷</li>").appendTo($("#city"));
+				//$("#city").append("<li id='xubh'>[硅谷]</li>");
 
-				//$("<li id='atguigu'>尚硅谷</li>").prependTo($("#city"));
-				$("#city").prepend("<li id='atguigu'>[尚硅谷]</li>");
+				//$("<li id='xubh'>硅谷</li>").prependTo($("#city"));
+				$("#city").prepend("<li id='xubh'>[硅谷]</li>");
 				
 				
 				
-				alert($("#atguigu").text());
+				alert($("#xubh").text());
 			})
 			
 		
@@ -63,7 +63,7 @@
 			<input type="radio" name="gender" value="female"/>Female
 	
 		<br><br>
-		name: <input type="text" name="username" value="atguigu"/>
+		name: <input type="text" name="username" value="xubh"/>
 		
 	</body>
 </html>	
