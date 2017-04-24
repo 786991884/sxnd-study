@@ -25,6 +25,7 @@
         <module>MyBatis_09_source</module>
         <module>MyBatis_10_plugin</module>
         <module>MyBatis_11_other</module>
+        <module>ssm-crud</module>
     </modules>
     <dependencies>
         <dependency>
