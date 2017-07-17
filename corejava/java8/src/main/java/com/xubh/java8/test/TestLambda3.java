@@ -55,10 +55,10 @@ public class TestLambda3 {
     //Function<T, R> 函数型接口：
     @Test
     public void test3() {
-        String newStr = strHandler("\t\t\t 我大硅谷威武   ", (str) -> str.trim());
+        String newStr = strHandler("\t\t\t 我大中华威武   ", (str) -> str.trim());
         System.out.println(newStr);
 
-        String subStr = strHandler("我大硅谷威武", (str) -> str.substring(2, 5));
+        String subStr = strHandler("我大中华威武", (str) -> str.substring(2, 5));
         System.out.println(subStr);
     }
 

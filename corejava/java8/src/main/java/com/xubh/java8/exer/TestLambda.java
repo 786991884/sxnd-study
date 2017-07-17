@@ -34,13 +34,13 @@ public class TestLambda {
 
     @Test
     public void test2() {
-        String trimStr = strHandler("\t\t\t 我大硅谷威武   ", (str) -> str.trim());
+        String trimStr = strHandler("\t\t\t 我大中华威武   ", (str) -> str.trim());
         System.out.println(trimStr);
 
         String upper = strHandler("abcdef", (str) -> str.toUpperCase());
         System.out.println(upper);
 
-        String newStr = strHandler("我大硅谷威武", (str) -> str.substring(2, 5));
+        String newStr = strHandler("我大中华威武", (str) -> str.substring(2, 5));
         System.out.println(newStr);
     }
 
