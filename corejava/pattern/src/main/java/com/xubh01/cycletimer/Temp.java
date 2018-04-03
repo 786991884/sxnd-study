@@ -24,7 +24,7 @@ public class Temp {
 
         System.out.println(LocalTime.now());
 
-        timer.newTimeout(new TimerTask() {
+        Timeout timeout = timer.newTimeout(new TimerTask() {
             @Override
             public void run(Timeout timeout) throws Exception {
                 System.out.println(LocalTime.now());

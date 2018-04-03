@@ -45,11 +45,11 @@ public class MyTest {
         return list;
     }
 
-    public static void main(String[] args) throws IOException {
+    /*public static void main(String[] args) throws IOException {
 
         List<String> list1 = readTxtFileIntoStringArrList("C:\\githubrepo\\sxnd-study\\corejava\\corejava_1\\src\\main\\java\\com\\xubh01\\io\\charIO\\all.txt");
         List<String> list2 = readTxtFileIntoStringArrList("C:\\githubrepo\\sxnd-study\\corejava\\corejava_1\\src\\main\\java\\com\\xubh01\\io\\charIO\\delete.txt");
-        /* 写入Txt文件 */
+        *//* 写入Txt文件 *//*
         File writename = new File("C:\\githubrepo\\sxnd-study\\corejava\\corejava_1\\src\\main\\java\\com\\xubh01\\io\\charIO\\delete_real.txt"); // 相对路径，如果没有则要建立一个新的output。txt文件
         writename.createNewFile(); // 创建新文件
         BufferedWriter out = new BufferedWriter(new FileWriter(writename));
@@ -59,6 +59,20 @@ public class MyTest {
                 out.write(s + "\r\n");
                 System.out.println(s);
             }
+        }
+        out.flush(); // 把缓存区内容压入文件
+        out.close(); // 最后记得关闭文件
+    }*/
+
+    public static void main(String[] args) throws IOException {
+
+        List<String> list1 = readTxtFileIntoStringArrList("C:\\githubrepo\\sxnd-study\\corejava\\corejava_1\\src\\main\\java\\com\\xubh01\\io\\charIO\\a.txt");
+        File writename = new File("C:\\githubrepo\\sxnd-study\\corejava\\corejava_1\\src\\main\\java\\com\\xubh01\\io\\charIO\\delete_real.txt"); // 相对路径，如果没有则要建立一个新的output。txt文件
+        writename.createNewFile(); // 创建新文件
+        BufferedWriter out = new BufferedWriter(new FileWriter(writename));
+        for (String s : list1) {
+            System.out.println(s.substring(0, 200));
+            out.write(s.substring(0, 200) + "\r\n");
         }
         out.flush(); // 把缓存区内容压入文件
         out.close(); // 最后记得关闭文件

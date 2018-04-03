@@ -25,6 +25,9 @@
         <module>spring-6</module>
         <module>spring-7</module>
         <module>spring-8</module>
+        <module>spring-annotation</module>
+        <module>springmvc-annotation</module>
+        <module>servlet3</module>
     </modules>
 
 </project>
